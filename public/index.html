@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <xml version="1.0" encoding="utf-8"></xml>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>FiguriX</title>
   </head>
@@ -29,3 +30,126 @@
     margin: 0px;
   }
 </style>
+<script>
+
+function obojiKamen() {
+
+    var zone = document.getElementById("kamen");
+
+    if (zone.value == "k1"){
+    document.getElementById('path0').style.fill = 'black';
+    }
+    else if (zone.value == "k2"){
+    document.getElementById('path0').style.fill = 'grey';
+    }
+    else if (zone.value == "k3"){
+    document.getElementById('path0').style.fill = '#88E665';
+    }
+    else if (zone.value == "k4"){
+    document.getElementById('path0').style.fill = '#00104c';
+    }
+}
+
+function obojiTijelo() {
+
+    var zone = document.getElementById("tijelo");
+
+    if (zone.value == "t1"){
+    document.getElementById('path3').style.fill = '#94FF6D';
+    }
+    else if (zone.value == "t2"){
+    document.getElementById('path3').style.fill = '#276710';
+    }
+    else if (zone.value == "t3"){
+    document.getElementById('path3').style.fill = '#49DCFF';
+    }
+    else if (zone.value == "t4"){
+    document.getElementById('path3').style.fill = '#7C6E39';
+    }
+    else if (zone.value == "t5"){
+    document.getElementById('path3').style.fill = '#680079';
+    }
+    else if (zone.value == "t6"){
+    document.getElementById('path3').style.fill = '#D1E52D';
+    }
+}
+
+function obojiOko() {
+
+    var zone = document.getElementById("oko");
+
+    if (zone.value == "o1"){
+    document.getElementById('path4').style.fill = '#D1E52D';
+    }
+    else if (zone.value == "o2"){
+    document.getElementById('path4').style.fill = '#79FF35';
+    }
+    else if (zone.value == "o3"){
+    document.getElementById('path4').style.fill = '#FF3535';
+    }
+}
+
+function obojiSkrge() {
+
+    var zone = document.getElementById("skrge");
+
+    if (zone.value == "s1"){
+    document.getElementById('path5').style.fill = '#E92525';
+    }
+    else if (zone.value == "s2"){
+    document.getElementById('path5').style.fill = '#BADA20';
+    }
+    else if (zone.value == "s3"){
+    document.getElementById('path5').style.fill = '#3A8E00';
+    }
+}
+
+function obojiDetalje() {
+
+    var zone = document.getElementById("detalji");
+
+    if (zone.value == "d1"){
+    document.getElementById('path7').style.fill = '#A5771D';
+    }
+    else if (zone.value == "d2"){
+    document.getElementById('path7').style.fill = '#35260B';
+    }
+    else if (zone.value == "d3"){
+    document.getElementById('path7').style.fill = '#5D7732';
+    }
+}
+
+function obojiOruzje() {
+
+    var zone = document.getElementById("oruzje");
+
+    if (zone.value == "oruzje1"){
+    document.getElementById('path6').style.fill = '#06174D';
+    }
+    else if (zone.value == "oruzje2"){
+    document.getElementById('path6').style.fill = '#4C71E8';
+    }
+    else if (zone.value == "oruzje3"){
+    document.getElementById('path6').style.fill = '#4A0821';
+    }
+    else if (zone.value == "oruzje4"){
+    document.getElementById('path6').style.fill = '#3C0C3C';
+    }
+}
+
+function obojiOdjecu() {
+
+    var zone = document.getElementById("odjeca");
+
+    if (zone.value == "odjeca1"){
+    document.getElementById('path8').style.fill = '#D9C57A';
+    }
+    else if (zone.value == "odjeca2"){
+    document.getElementById('path8').style.fill = '#BDFBFF';
+    }
+    else if (zone.value == "odjeca3"){
+    document.getElementById('path8').style.fill = '#4A0821';
+    }
+}
+
+</script>

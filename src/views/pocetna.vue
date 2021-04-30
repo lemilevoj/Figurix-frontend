@@ -49,27 +49,7 @@
 								</form>
 							</div>
 						</div>
-						
-							<a href="/registracija" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Registracija</a>
-							<div class="dropdown-menu action-form">
-								<form action="/examples/actions/confirmation.php" method="post">
-									<p class="hint-text">Fill in this form to create your account!</p>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Confirm Password" required="required">
-									</div>
-									<div class="form-group">
-										<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Sign up">
-								</form>
-							</div>
-						
+							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
 					</div>
 				</div>
 			</nav>
