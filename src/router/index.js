@@ -89,6 +89,21 @@ const routes = [
     name: 'bloodrage',
     component: () => import('../views/bloodrage.vue')
   },
+  {
+    path: '/humanoid_frog',
+    name: 'humanoid_frog',
+    component: () => import('../views/humanoid_frog.vue')
+  },
+  {
+    path: '/elf_ranger',
+    name: 'elf_ranger',
+    component: () => import('../views/elf_ranger.vue')
+  },
+  {
+    path: '/wendy_adams',
+    name: 'wendy_adams',
+    component: () => import('../views/wendy_adams.vue')
+  },
 ]
 
 const router = new VueRouter({
