@@ -342,7 +342,7 @@ body {
     animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span { 
-    background-image: url(/assets/kingdom.jpg);
+    background-image: url(/assets/kingdom.png);
     -webkit-animation-delay: 12s;
     -moz-animation-delay: 12s;
     -o-animation-delay: 12s;
