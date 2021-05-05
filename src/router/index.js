@@ -104,6 +104,26 @@ const routes = [
     name: 'wendy_adams',
     component: () => import('../views/wendy_adams.vue')
   },
+  {
+    path: '/wizard',
+    name: 'wizard',
+    component: () => import('../views/wizard.vue')
+  },
+  {
+    path: '/meleeElf',
+    name: 'meleeElf',
+    component: () => import('../views/meleeElf.vue')
+  },
+  {
+    path: '/naruto',
+    name: 'naruto',
+    component: () => import('../views/naruto.vue')
+  },
+  {
+    path: '/dragon',
+    name: 'dragon',
+    component: () => import('../views/dragon.vue')
+  }
 ]
 
 const router = new VueRouter({
