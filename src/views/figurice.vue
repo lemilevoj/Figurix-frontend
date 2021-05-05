@@ -55,40 +55,28 @@
 
     <div class="l-container">
         <div class="b-game-card">
-            <a href="/humanoid_frog"><div class="b-game-card__cover" style="background-image: url(/assets/humanoid_frog.jpg);"><h1 class="ime_igre">Humanoid Frog</h1></div></a>
+            <a href="/humanoid_frog"><div class="b-game-card__cover" style="background-image: url(/assets/humanoid_frog.jpg);"><h1 class="ime_figure">Humanoid Frog</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/elf_ranger"><div class="b-game-card__cover" style="background-image: url(/assets/elf_ranger.jpg);"><h1 class="ime_igre">Elf Ranger</h1></div></a>
+            <a href="/elf_ranger"><div class="b-game-card__cover" style="background-image: url(/assets/elf_ranger.jpg);"><h1 class="ime_figure">Elf Ranger</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/wendy_adams"><div class="b-game-card__cover" style="background-image: url(/assets/wendy_adams.jpg);"><h1 class="ime_igre">Wendy Adams</h1></div></a>
+            <a href="/wendy_adams"><div class="b-game-card__cover" style="background-image: url(/assets/wendy_adams.jpg);"><h1 class="ime_figure">Wendy Adams</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/pokemon"><div class="b-game-card__cover" style="background-image: url(/assets/pokemon.jpg);"><h1 class="ime_igre">Pokémon</h1></div></a>
+            <a href="/dragon"><div class="b-game-card__cover" style="background-image: url(/assets/zmaj.png);"><h1 class="ime_figure">Adorable Dragon</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/catan"><div class="b-game-card__cover" style="background-image: url(/assets/catan1.jpg);"><h1 class="ime_igre">Catan</h1></div></a>
+            <a href="/naruto"><div class="b-game-card__cover" style="background-image: url(/assets/naruto.png);"><h1 class="ime_figure">Naruto</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/arkhamhorror"><div class="b-game-card__cover" style="background-image: url(/assets/arkhamhorror.jpg);"><h1 class="ime_igre">Arkham Horror</h1></div></a>
+            <a href="/unicorn"><div class="b-game-card__cover" style="background-image: url(/assets/unicorn.png);"><h1 class="ime_figure">Unicorn</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/7wonders"><div class="b-game-card__cover" style="background-image: url(/assets/nova.jpg);"><h1 class="ime_igre">7 Wonders</h1></div></a>
+            <a href="/mele_elf_female"><div class="b-game-card__cover" style="background-image: url(/assets/melee_elf_female.png);"><h1 class="ime_figure">Mele elf female</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/uno"><div class="b-game-card__cover" style="background-image: url(/assets/uno.PNG);"><h1 class="ime_igre">Uno</h1></div></a>
-        </div>
-		<div class="b-game-card">
-            <a href="/lostcities"><div class="b-game-card__cover" style="background-image: url(/assets/lostcities.PNG);"><h1 class="ime_igre">Lost Cities</h1></div></a>
-        </div>
-		<div class="b-game-card">
-            <a href="/bloodrage"><div class="b-game-card__cover" style="background-image: url(/assets/bloodrage.jpg);"><h1 class="ime_igre">Blood Rage</h1></div></a>
-        </div>
-		<div class="b-game-card">
-            <a href="/risk"><div class="b-game-card__cover" style="background-image: url(/assets/risk.jpg);"><h1 class="ime_igre">Risk</h1></div></a>
-        </div>
-		<div class="b-game-card">
-            <a href="/splender"><div class="b-game-card__cover" style="background-image: url(/assets/splendor.jpg);"><h1 class="ime_igre">Splendor</h1></div></a>
+            <a href="/wizard"><div class="b-game-card__cover" style="background-image: url(/assets/wizard.png);"><h1 class="ime_figure">Wizard</h1></div></a>
         </div>
     </div>
 
@@ -369,7 +357,7 @@ body {
   opacity: 0.6;
   transform: rotateX(7deg) translateY(-6px) scale(1.05);
 }
-.ime_igre{
+.ime_figure{
     color:white;
     position:absolute;
     bottom:0px;
