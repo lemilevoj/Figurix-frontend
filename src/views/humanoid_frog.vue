@@ -63,7 +63,7 @@
 		<option value="k3">Zelena</option>
 		<option value="k4">Plava</option>
 	</select>
-	<select class="select" name="tijelo" id="tijelo" onclick="obojiTijelo();">
+	<select class="select" name="tijeloZaba" id="tijeloZaba" onclick="obojiTijeloZabe();">
 		<option>Tijelo</option>
 		<option value="t1">Svijetlo zelena</option>
 		<option value="t2">Tamno zelena</option>
