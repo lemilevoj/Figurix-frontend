@@ -73,7 +73,7 @@
             <a href="/unicorn"><div class="b-game-card__cover" style="background-image: url(/assets/unicorn.png);"><h1 class="ime_figure">Unicorn</h1></div></a>
         </div>
         <div class="b-game-card">
-            <a href="/mele_elf_female"><div class="b-game-card__cover" style="background-image: url(/assets/melee_elf_female.png);"><h1 class="ime_figure">Mele elf female</h1></div></a>
+            <a href="/meleeElf"><div class="b-game-card__cover" style="background-image: url(/assets/melee_elf_female.png);"><h1 class="ime_figure">Mele elf female</h1></div></a>
         </div>
         <div class="b-game-card">
             <a href="/wizard"><div class="b-game-card__cover" style="background-image: url(/assets/wizard.png);"><h1 class="ime_figure">Wizard</h1></div></a>
