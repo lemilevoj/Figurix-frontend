@@ -58,7 +58,7 @@
 <div class="uredi12">
 	<div class="select-isti-red">
 	<select class="select" name="dragon" id="dragon" onclick="obojidragon();">
-		<option>Tijelo</option>
+		<option value="default">Tijelo</option>
 		<option value="yy1">Crna</option>
 		<option value="yy2">Ljubičasta</option>
 		<option value="yy3">Zelena</option>
@@ -67,7 +67,7 @@
 
 	</select>
 	<select class="select" name="stomak" id="stomak" onclick="obojistomak();">
-		<option>Stomak</option>
+		<option value="default">Stomak</option>
 		<option value="ww1">Crna</option>
 		<option value="ww2">Zelena</option>
 		<option value="ww3">Plava</option>
@@ -819,9 +819,9 @@
 </template>
 
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#E5432A;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#4A1A0C;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#CA9917;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:white;}
 </style>
 
