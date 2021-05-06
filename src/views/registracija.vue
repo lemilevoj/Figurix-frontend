@@ -1,7 +1,7 @@
 <template>
 <div>
 <div class="login-box">
-  <h2>Registracija</h2>
+  <h2 class="naslov">Registracija</h2>
   <form>
     <div class="user-box">
       <input type="text" name="" required="">
@@ -101,13 +101,13 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: rgb(255, 240, 30);
+  background: white;
 }
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 550px;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: black;
@@ -120,6 +120,7 @@ body {
   padding: 0;
   color: white;
   text-align: center;
+  font-size: 45px;
 }
 .login-box .user-box {
   position: relative;
@@ -127,7 +128,7 @@ body {
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 22px;
   color: #fff;
   margin-bottom: 30px;
   border: none;
@@ -139,8 +140,8 @@ body {
   position: absolute;
   top:0;
   left: 0;
-  padding: 10px 0;
-  font-size: 16px;
+  padding: 3px 0;
+  font-size: 22px;
   color: #fff;
   pointer-events: none;
   transition: .5s;
@@ -150,14 +151,14 @@ body {
   top: -20px;
   left: 0;
   color: white;
-  font-size: 12px;
+  font-size: 19px;
 }
 .login-box form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
-  color: yellow;
-  font-size: 16px;
+  color: rgb(248, 235, 54);
+  font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
@@ -165,15 +166,7 @@ body {
   margin-top: 40px;
   letter-spacing: 4px
 }
-.login-box a:hover {
-  background:yellow;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px yellow,
-              0 0 25px yellow,
-              0 0 50px yellow,
-              0 0 100px yellow;
-}
+
 .login-box a span {
   position: absolute;
   display: block;
@@ -183,9 +176,10 @@ body {
   left: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, yellow);
+  background: linear-gradient(90deg, transparent,  rgb(248, 235, 54));
   animation: btn-anim1 1s linear infinite;
 }
+
 @keyframes btn-anim1 {
   0% {
     left: -100%;
@@ -199,7 +193,7 @@ body {
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, yellow);
+  background: linear-gradient(180deg, transparent, rgb(248, 235, 54));
   animation: btn-anim2 1s linear infinite;
   animation-delay: .45s
 }
@@ -216,7 +210,7 @@ body {
   right: -100%;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg, transparent, yellow);
+  background: linear-gradient(270deg, transparent, rgb(248, 235, 54));
   animation: btn-anim3 1s linear infinite;
   animation-delay: .5s
 }
@@ -233,7 +227,7 @@ body {
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg, transparent,yellow);
+  background: linear-gradient(360deg, transparent,rgb(248, 235, 54));
   animation: btn-anim4 1s linear infinite;
   animation-delay: .75s
 }
