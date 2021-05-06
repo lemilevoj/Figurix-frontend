@@ -58,7 +58,7 @@
 <div class="uredi10">
 	<div class="select-isti-red">
 	<select class="select" name="ss" id="ss" onclick="obojiss();">
-		<option>Odjeća</option>
+		<option value="default">Odjeća</option>
 		<option value="ss1">Crna</option>
 		<option value="ss2">Ljubičasta</option>
 		<option value="ss3">Zelena</option>
@@ -67,7 +67,7 @@
 
 	</select>
 	<select class="select" name="det" id="det" onclick="obojidet();">
-		<option>Vatrica</option>
+		<option value="default">Vatrica</option>
 		<option value="rr1">Crna</option>
 		<option value="rr2">Zelena</option>
 		<option value="rr3">Plava</option>
@@ -76,7 +76,7 @@
 		<option value="rr6">Žuta</option>
 	</select>
 	<select class="select" name="oo" id="oo" onclick="obojioo();">
-		<option>Kosa</option>
+		<option value="default">Kosa</option>
 		<option value="oo1">Žuta</option>
 		<option value="oo2">Zelena</option>
 		<option value="oo3">Crvena</option>
@@ -2513,11 +2513,11 @@
 
 <style type="text/css">
     .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#EFDACF;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:gray}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#946F4F;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:gray;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#A6805E;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:gray;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#020100;}
 	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#614c42;}
 	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#252C3B;}
