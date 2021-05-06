@@ -31,6 +31,7 @@
   }
 </style>
 <script>
+  
 
 function obojiKamen() {
 
@@ -47,6 +48,9 @@ function obojiKamen() {
     }
     else if (zone.value == "k4"){
     document.getElementById('path0').style.fill = '#00104c';
+    }
+    else if (zone.value == "default"){
+    document.getElementById('path0').style.fill = '#B5B7BB';
     }
 }
 
@@ -72,6 +76,9 @@ function obojiTijeloZabe() {
     else if (zone.value == "t6"){
     document.getElementById('path3').style.fill = '#D1E52D';
     }
+    else if (zone.value == "default"){
+    document.getElementById('path3').style.fill = '#B5B7BB';
+    }
 }
 
 function obojiOko() {
@@ -86,6 +93,9 @@ function obojiOko() {
     }
     else if (zone.value == "o3"){
     document.getElementById('path4').style.fill = '#FF3535';
+    }
+    else if (zone.value == "default"){
+    document.getElementById('path4').style.fill = '#B5B7BB';
     }
 }
 
@@ -102,6 +112,9 @@ function obojiSkrge() {
     else if (zone.value == "s3"){
     document.getElementById('path5').style.fill = '#3A8E00';
     }
+    else if (zone.value == "default"){
+    document.getElementById('path5').style.fill = '#B5B7BB';
+    }
 }
 
 function obojiDetalje() {
@@ -116,6 +129,9 @@ function obojiDetalje() {
     }
     else if (zone.value == "d3"){
     document.getElementById('path7').style.fill = '#5D7732';
+    }
+    else if (zone.value == "default"){
+    document.getElementById('path7').style.fill = '#B5B7BB';
     }
 }
 
@@ -135,6 +151,9 @@ function obojiOruzje() {
     else if (zone.value == "oruzje4"){
     document.getElementById('path6').style.fill = '#3C0C3C';
     }
+    else if (zone.value == "default"){
+    document.getElementById('path6').style.fill = '#B5B7BB';
+    }
 }
 
 function obojiOdjecu() { 
@@ -149,6 +168,9 @@ function obojiOdjecu() {
     }
     else if (zone.value == "odjeca3"){
     document.getElementById('path8').style.fill = '#4A0821';
+    }
+    else if (zone.value == "default"){
+    document.getElementById('path8').style.fill = '#B5B7BB';
     }
 }
 
@@ -170,6 +192,9 @@ function obojiGlava() { // elf ranger
     else if (zone.value == "glava4"){
     document.getElementById('elfr1').style.fill = '#F5F1F1';
     }
+    else if (zone.value == "default"){
+  document.getElementById('elfr1').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiDetalje1() { // elf ranger
@@ -194,6 +219,9 @@ document.getElementById('elfr2').style.fill = '#851DE8';
 else if (zone.value == "detalji6"){
 document.getElementById('elfr2').style.fill = '#D8E81D';
 }
+else if (zone.value == "default"){
+  document.getElementById('elfr2').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiŠtit() { // elf ranger
@@ -218,6 +246,9 @@ document.getElementById('elfr5').style.fill = '#EEF2F8';
 else if (zone.value == "or6"){
 document.getElementById('elfr5').style.fill = '#A26B2A';
 }
+else if (zone.value == "default"){
+  document.getElementById('elfr5').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiPojas() { // elf ranger
@@ -236,35 +267,15 @@ document.getElementById('elfr6').style.fill = '#65F23E';
 else if (zone.value == "pio4"){
 document.getElementById('elfr6').style.fill = '#3E6BF2';
 }
+else if (zone.value == "default"){
+  document.getElementById('elfr6').style.fill = '#B5B7BB';
+  }
 }
 
-function obojiOdetalji() { // elf ranger
 
-var zone = document.getElementById("oDetalji");
+function obojiKosicu() { // elf ranger
 
-if (zone.value == "od1"){
-document.getElementById('elfr4').style.fill = '#F2B33E';
-}
-else if (zone.value == "od2"){
-document.getElementById('elfr4').style.fill = '#C47F00';
-}
-else if (zone.value == "od3"){
-document.getElementById('elfr4').style.fill = '#F2C73E';
-}
-else if (zone.value == "od4"){
-document.getElementById('elfr4').style.fill = '#FFFFFF';
-}
-else if (zone.value == "od5"){
-document.getElementById('elfr4').style.fill = '#2DC0C5';
-}
-else if (zone.value == "od6"){
-document.getElementById('elfr4').style.fill = '#C52DBD';
-}
-}
-
-function obojiKosa() { // elf ranger
-
-var zone = document.getElementById("kosa");
+var zone = document.getElementById("kosica");
 
 if (zone.value == "kip1"){
 document.getElementById('elfr3').style.fill = '#AD2713';
@@ -284,24 +295,9 @@ document.getElementById('elfr3').style.fill = '#EAE423';
 else if (zone.value == "kip6"){
 document.getElementById('elfr3').style.fill = '#A77E13';
 }
-}
-
-function obojiSjena() { // elf ranger
-
-var zone = document.getElementById("sjena");
-
-if (zone.value == "sjena1"){
-document.getElementById('elfr7').style.fill = '#DBB7AC';
-}
-else if (zone.value == "sjena2"){
-document.getElementById('elfr7').style.fill = '#F8F6F5';
-}
-else if (zone.value == "sjena3"){
-document.getElementById('elfr7').style.fill = '#000000';
-}
-else if (zone.value == "sjena4"){
-document.getElementById('elfr7').style.fill = '#D4CECC';
-}
+else if (zone.value == "default"){
+  document.getElementById('elfr3').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiTijelo() { // elf ranger
@@ -320,6 +316,9 @@ document.getElementById('elfr8').style.fill = '#C6AEAE';
 else if (zone.value == "tijelo4"){
 document.getElementById('elfr8').style.fill = '#A2A2A2';
 }
+else if (zone.value == "default"){
+  document.getElementById('elfr8').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiGdo() { // elf ranger
@@ -341,6 +340,9 @@ document.getElementById('elfr9').style.fill = '#8A34C1';
 else if (zone.value == "gdo5"){
 document.getElementById('elfr9').style.fill = '#3F46DE';
 }
+else if (zone.value == "default"){
+  document.getElementById('elfr9').style.fill = '#B5B7BB';
+  }
 }
 
 /* -------------- Wendy Adams -------------- */
@@ -350,20 +352,23 @@ function obojiKosa() { // wendy adams
 var zone = document.getElementById("kosa");
 
 if (zone.value == "kir1"){
-document.getElementById('wendy1').style.fill = '#C8D81F';
+document.getElementById('wendy1').style.fill = '#0F548E';
 }
 else if (zone.value == "kir2"){
-document.getElementById('wendy1').style.fill = '#797981';
+document.getElementById('wendy1').style.fill = '#555A5D';
 }
 else if (zone.value == "kir3"){
-document.getElementById('wendy1').style.fill = '#353562';
+document.getElementById('wendy1').style.fill = '#4E155C';
 }
 else if (zone.value == "kir4"){
-document.getElementById('wendy1').style.fill = '#2B6589';
+document.getElementById('wendy1').style.fill = '#BF8E43';
 }
 else if (zone.value == "kir5"){
 document.getElementById('wendy1').style.fill = '#64232D';
 }
+else if (zone.value == "default"){
+  document.getElementById('wendy1').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiDip() { // wendy adams
@@ -385,70 +390,32 @@ document.getElementById('wendy2').style.fill = '#2B6589';
 else if (zone.value == "dip5"){
 document.getElementById('wendy2').style.fill = '#64232D';
 }
+else if (zone.value == "default"){
+  document.getElementById('wendy2').style.fill = '#B5B7BB';
+  }
 }
 
-function obojiSiz() { // wendy adams
+function obojiLice() { // wendy adams
 
-var zone = document.getElementById("siz");
+var zone = document.getElementById("lice");
 
-if (zone.value == "siz1"){
-document.getElementById('wendy3').style.fill = '#C8D81F';
+if (zone.value == "l1"){
+document.getElementById('wendy6').style.fill = '#F9F5ED';
 }
-else if (zone.value == "siz2"){
-document.getElementById('wendy3').style.fill = '#797981';
+else if (zone.value == "l2"){
+document.getElementById('wendy6').style.fill = '#797981';
 }
-else if (zone.value == "siz3"){
-document.getElementById('wendy3').style.fill = '#353562';
+else if (zone.value == "l3"){
+document.getElementById('wendy6').style.fill = '#E1AD45';
 }
-else if (zone.value == "siz4"){
-document.getElementById('wendy3').style.fill = '#2B6589';
+else if (zone.value == "l4"){
+document.getElementById('wendy6').style.fill = '#080603';
 }
-else if (zone.value == "siz5"){
-document.getElementById('wendy3').style.fill = '#64232D';
-}
-}
-
-function obojiKrakovi() { // wendy adams
-
-var zone = document.getElementById("krakovi");
-
-if (zone.value == "kr1"){
-document.getElementById('wendy4').style.fill = '#C8D81F';
-}
-else if (zone.value == "kr2"){
-document.getElementById('wendy4').style.fill = '#797981';
-}
-else if (zone.value == "kr3"){
-document.getElementById('wendy4').style.fill = '#353562';
-}
-else if (zone.value == "kr4"){
-document.getElementById('wendy4').style.fill = '#2B6589';
-}
-else if (zone.value == "kr5"){
-document.getElementById('wendy4').style.fill = '#64232D';
-}
+else if (zone.value == "default"){
+  document.getElementById('wendy6').style.fill = '#B5B7BB';
+  }
 }
 
-function obojiDetkr() { // wendy adams
-
-var zone = document.getElementById("detkr");
-
-if (zone.value == "det1"){
-document.getElementById('wendy5').style.fill = '#C8D81F';
-}
-else if (zone.value == "det2"){
-document.getElementById('wendy5').style.fill = '#797981';
-}
-else if (zone.value == "det3"){
-document.getElementById('wendy5').style.fill = '#353562';
-}
-else if (zone.value == "det4"){
-document.getElementById('wendy5').style.fill = '#2B6589';
-}
-else if (zone.value == "det5"){
-document.getElementById('wendy5').style.fill = '#64232D';
-}
-}
 
 function obojiSjenaa() { // wendy adams
 
@@ -466,25 +433,11 @@ document.getElementById('wendy7').style.fill = '#B28419';
 else if (zone.value == "sjenaa4"){
 document.getElementById('wendy7').style.fill = '#0A0904';
 }
+else if (zone.value == "default"){
+  document.getElementById('wendy7').style.fill = '#B5B7BB';
+  }
 }
 
-function obojiDetl() { // wendy adams
-
-var zone = document.getElementById("detl");
-
-if (zone.value == "detl1"){
-document.getElementById('wendy8').style.fill = '#F6F7E5';
-}
-else if (zone.value == "detl2"){
-document.getElementById('wendy8').style.fill = '#797981';
-}
-else if (zone.value == "detl3"){
-document.getElementById('wendy8').style.fill = '#B28419';
-}
-else if (zone.value == "detl4"){
-document.getElementById('wendy8').style.fill = '#AF61C1';
-}
-}
 
 function obojiIspune() { // wendy adams
 
@@ -502,115 +455,133 @@ document.getElementById('wendy9').style.fill = '#AD3A98';
 else if (zone.value == "ispuna4"){
 document.getElementById('wendy9').style.fill = '#3A78AD';
 }
+else if (zone.value == "default"){
+  document.getElementById('wendy9').style.fill = '#B5B7BB';
+  }
 }
 
 /* -------------- Naruto -------------- */
 
 function obojioo() { // naruto
 
-var zone = document.getElementById("oo");
+  var zone = document.getElementById("oo");
 
-if (zone.value == "oo1"){
-document.getElementById('na5').style.fill = '#D1E52D';
-}
-else if (zone.value == "oo2"){
-document.getElementById('na5').style.fill = '#79FF35';
-}
-else if (zone.value == "oo3"){
-document.getElementById('na5').style.fill = '#FF3535';
-}
+  if (zone.value == "oo1"){
+  document.getElementById('na5').style.fill = '#D1E52D';
+  }
+  else if (zone.value == "oo2"){
+  document.getElementById('na5').style.fill = '#79FF35';
+  }
+  else if (zone.value == "oo3"){
+  document.getElementById('na5').style.fill = '#FF3535';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('na5').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiss() { // naruto
 
-var zone = document.getElementById("ss");
+  var zone = document.getElementById("ss");
 
-if (zone.value == "ss1"){
-document.getElementById('na1').style.fill = 'black';
-}
-else if (zone.value == "ss2"){
-document.getElementById('na1').style.fill = '#D133FF';
-}
-else if (zone.value == "ss3"){
-document.getElementById('na1').style.fill = '#88E665';
-}
-else if (zone.value == "ss4"){
-document.getElementById('na1').style.fill = '#00104c';
-}
-else if (zone.value == "ss5"){
-document.getElementById('na1').style.fill = 'tomato';
-}
+  if (zone.value == "ss1"){
+  document.getElementById('na1').style.fill = 'black';
+  }
+  else if (zone.value == "ss2"){
+  document.getElementById('na1').style.fill = '#D133FF';
+  }
+  else if (zone.value == "ss3"){
+  document.getElementById('na1').style.fill = '#88E665';
+  }
+  else if (zone.value == "ss4"){
+  document.getElementById('na1').style.fill = '#00104c';
+  }
+  else if (zone.value == "ss5"){
+  document.getElementById('na1').style.fill = 'tomato';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('na1').style.fill = '#B5B7BB';
+  }
 }
 
 function obojidet() { // naruto
 
-var zone = document.getElementById("det");
+  var zone = document.getElementById("det");
 
-if (zone.value == "rr1"){
-document.getElementById('na3').style.fill = 'black';
-}
-else if (zone.value == "rr2"){
-document.getElementById('na3').style.fill = '#276710';
-}
-else if (zone.value == "rr3"){
-document.getElementById('na3').style.fill = '#49DCFF';
-}
-else if (zone.value == "rr4"){
-document.getElementById('na3').style.fill = 'tomato';
-}
-else if (zone.value == "rr5"){
-document.getElementById('na3').style.fill = '#680079';
-}
-else if (zone.value == "rr6"){
-document.getElementById('na3').style.fill = '#D1E52D';
-}
+  if (zone.value == "rr1"){
+  document.getElementById('na3').style.fill = 'black';
+  }
+  else if (zone.value == "rr2"){
+  document.getElementById('na3').style.fill = '#276710';
+  }
+  else if (zone.value == "rr3"){
+  document.getElementById('na3').style.fill = '#49DCFF';
+  }
+  else if (zone.value == "rr4"){
+  document.getElementById('na3').style.fill = 'tomato';
+  }
+  else if (zone.value == "rr5"){
+  document.getElementById('na3').style.fill = '#680079';
+  }
+  else if (zone.value == "rr6"){
+  document.getElementById('na3').style.fill = '#D1E52D';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('na3').style.fill = '#B5B7BB';
+  }
 }
 
 /* -------------- Dragon  -------------- */
 
 function obojidragon() { //dragon
 
-var zone = document.getElementById("dragon");
+  var zone = document.getElementById("dragon");
 
-if (zone.value == "yy1"){
-document.getElementById('it0').style.fill = 'black';
-}
-else if (zone.value == "yy2"){
-document.getElementById('it0').style.fill = '#D133FF';
-}
-else if (zone.value == "yy3"){
-document.getElementById('it0').style.fill = '#88E665';
-}
-else if (zone.value == "yy4"){
-document.getElementById('it0').style.fill = '#00104c';
-}
-else if (zone.value == "yy5"){
-document.getElementById('it0').style.fill = 'tomato';
-}
+  if (zone.value == "yy1"){
+  document.getElementById('it0').style.fill = 'black';
+  }
+  else if (zone.value == "yy2"){
+  document.getElementById('it0').style.fill = '#D133FF';
+  }
+  else if (zone.value == "yy3"){
+  document.getElementById('it0').style.fill = '#88E665';
+  }
+  else if (zone.value == "yy4"){
+  document.getElementById('it0').style.fill = '#00104c';
+  }
+  else if (zone.value == "yy5"){
+  document.getElementById('it0').style.fill = 'tomato';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('it0').style.fill = '#B5B7BB';
+  }
 }
 
 function obojistomak() { //dragon
 
-var zone = document.getElementById("stomak");
+  var zone = document.getElementById("stomak");
 
-if (zone.value == "ww1"){
-document.getElementById('it2').style.fill = 'black';
-}
-else if (zone.value == "ww2"){
-document.getElementById('it2').style.fill = '#276710';
-}
-else if (zone.value == "ww3"){
-document.getElementById('it2').style.fill = '#49DCFF';
-}
-else if (zone.value == "ww4"){
-document.getElementById('it2').style.fill = 'tomato';
-}
-else if (zone.value == "ww5"){
-document.getElementById('it2').style.fill = '#680079';
-}
-else if (zone.value == "ww6"){
-document.getElementById('it2').style.fill = '#D1E52D';
-}
+  if (zone.value == "ww1"){
+  document.getElementById('it2').style.fill = 'black';
+  }
+  else if (zone.value == "ww2"){
+  document.getElementById('it2').style.fill = '#276710';
+  }
+  else if (zone.value == "ww3"){
+  document.getElementById('it2').style.fill = '#49DCFF';
+  }
+  else if (zone.value == "ww4"){
+  document.getElementById('it2').style.fill = 'tomato';
+  }
+  else if (zone.value == "ww5"){
+  document.getElementById('it2').style.fill = '#680079';
+  }
+  else if (zone.value == "ww6"){
+  document.getElementById('it2').style.fill = '#D1E52D';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('it2').style.fill = '#B5B7BB';
+  }
 }
 
 /* -------------- Wizard -------------- */
@@ -630,99 +601,184 @@ var zone = document.getElementById("plast");
   }
   else if (zone.value == "plast4"){
   document.getElementById('wizard2').style.fill = '#542757';
-}
-}
+  }
+  else if (zone.value == "default"){
+    document.getElementById('wizard2').style.fill = '#B5B7BB';
+    }
+  } 
 function obojiDetaljeWizard() {
 
-var zone = document.getElementById("detalji_wizard");
+  var zone = document.getElementById("detalji_wizard");
 
-if (zone.value == "detalji_wizard1"){
-document.getElementById('wizard6').style.fill = '#541d00';
-}
-else if (zone.value == "detalji_wizard2"){
-document.getElementById('wizard6').style.fill = '#735d51';
-}
-else if (zone.value == "detalji_wizard3"){
-document.getElementById('wizard6').style.fill = '#18003b';
-}
+  if (zone.value == "detalji_wizard1"){
+  document.getElementById('wizard6').style.fill = '#541d00';
+  }
+  else if (zone.value == "detalji_wizard2"){
+  document.getElementById('wizard6').style.fill = '#735d51';
+  }
+  else if (zone.value == "detalji_wizard3"){
+  document.getElementById('wizard6').style.fill = '#18003b';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('wizard6').style.fill = '#B5B7BB';
+  }
 }
 
 /* -------------- Melee Female Elf -------------- */
 
 function obojiKozuElf() {
 
-var zone = document.getElementById("mElf_Koza");
+  var zone = document.getElementById("mElf_Koza");
 
-if (zone.value == "mElf_Koza1"){
-document.getElementById('mElf0').style.fill = '#E5C0B5';
-}
-else if (zone.value == "mElf_Koza2"){
-document.getElementById('mElf0').style.fill = '#464270';
-}
-else if (zone.value == "mElf_Koza3"){
-document.getElementById('mElf0').style.fill = '#696873';
-}
+  if (zone.value == "mElf_Koza1"){
+  document.getElementById('mElf0').style.fill = '#E5C0B5';
+  }
+  else if (zone.value == "mElf_Koza2"){
+  document.getElementById('mElf0').style.fill = '#464270';
+  }
+  else if (zone.value == "mElf_Koza3"){
+  document.getElementById('mElf0').style.fill = '#696873';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('mElf0').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiPlastElf() { //melee elf female
  
-var zone = document.getElementById("mElf_Plast");
+  var zone = document.getElementById("mElf_Plast");
 
-if (zone.value == "mElf_Plast1"){
-document.getElementById('mElf3').style.fill = '#2F5B49';
-}
-else if (zone.value == "mElf_Plast2"){
-document.getElementById('mElf3').style.fill = '#540046';
-}
-else if (zone.value == "mElf_Plast3"){
-document.getElementById('mElf3').style.fill = '#52031c';
-}
-else if (zone.value == "mElf_Plast4"){
-document.getElementById('mElf3').style.fill = '#35565c';
-}
-else if (zone.value == "mElf_Plast5"){
-document.getElementById('mElf3').style.fill = '#503a52';
-}
+  if (zone.value == "mElf_Plast1"){
+  document.getElementById('mElf3').style.fill = '#2F5B49';
+  }
+  else if (zone.value == "mElf_Plast2"){
+  document.getElementById('mElf3').style.fill = '#540046';
+  }
+  else if (zone.value == "mElf_Plast3"){
+  document.getElementById('mElf3').style.fill = '#52031c';
+  }
+  else if (zone.value == "mElf_Plast4"){
+  document.getElementById('mElf3').style.fill = '#35565c';
+  }
+  else if (zone.value == "mElf_Plast5"){
+  document.getElementById('mElf3').style.fill = '#503a52';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('mElf3').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiRukave() { //melee elf female
 
 var zone = document.getElementById("mElf_rukavi");
 
-if (zone.value == "mElf_rukavi1"){
-document.getElementById('mElf4').style.fill = '#39A351';
-}
-else if (zone.value == "mElf_rukavi2"){
-document.getElementById('mElf4').style.fill = '#2F5B49';
-}
-else if (zone.value == "mElf_rukavi3"){
-document.getElementById('mElf4').style.fill = '#730f0f';
-}
-else if (zone.value == "mElf_rukavi4"){
-document.getElementById('mElf4').style.fill = '#a5a66f';
-}
-else if (zone.value == "mElf_rukavi5"){
-document.getElementById('mElf4').style.fill = '#754224';
-}
+  if (zone.value == "mElf_rukavi1"){
+  document.getElementById('mElf4').style.fill = '#39A351';
+  }
+  else if (zone.value == "mElf_rukavi2"){
+  document.getElementById('mElf4').style.fill = '#2F5B49';
+  }
+  else if (zone.value == "mElf_rukavi3"){
+  document.getElementById('mElf4').style.fill = '#730f0f';
+  }
+  else if (zone.value == "mElf_rukavi4"){
+  document.getElementById('mElf4').style.fill = '#a5a66f';
+  }
+  else if (zone.value == "mElf_rukavi5"){
+  document.getElementById('mElf4').style.fill = '#754224';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('mElf4').style.fill = '#B5B7BB';
+  }
 }
 
 function obojiCizme() { //melee elf female
 
-var zone = document.getElementById("mElf_cizme");
+  var zone = document.getElementById("mElf_cizme");
 
-if (zone.value == "mElf_cizme1"){
-document.getElementById('mElf6').style.fill = '#332607';
-}
-else if (zone.value == "mElf_cizme2"){
-document.getElementById('mElf6').style.fill = '#805341';
-}
-else if (zone.value == "mElf_cizme3"){
-document.getElementById('mElf6').style.fill = '#999999';
-}
-else if (zone.value == "mElf_cizme4"){
-document.getElementById('mElf6').style.fill = '#730f0f';
-}
+  if (zone.value == "mElf_cizme1"){
+  document.getElementById('mElf6').style.fill = '#332607';
+  }
+  else if (zone.value == "mElf_cizme2"){
+  document.getElementById('mElf6').style.fill = '#805341';
+  }
+  else if (zone.value == "mElf_cizme3"){
+  document.getElementById('mElf6').style.fill = '#999999';
+  }
+  else if (zone.value == "mElf_cizme4"){
+  document.getElementById('mElf6').style.fill = '#730f0f';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('mElf6').style.fill = '#B5B7BB';
+  }
 }
 
+/* -------------- Unicorn -------------- */
+
+function obojiTijeloUnicorn() {
+
+  var zone = document.getElementById("tijelo_unicorn");
+
+  if (zone.value == "tijelo_unicorn1"){
+  document.getElementById('unicorn1').style.fill = '#D68A9E';
+  }
+  else if (zone.value == "tijelo_unicorn2"){
+  document.getElementById('unicorn1').style.fill = '#882a96';
+  }
+  else if (zone.value == "tijelo_unicorn3"){
+  document.getElementById('unicorn1').style.fill = '#f2b818';
+  }
+  else if (zone.value == "tijelo_unicorn4"){
+  document.getElementById('unicorn1').style.fill = '#fc8d1e';
+  }
+  else if (zone.value == "tijelo_unicorn5"){
+  document.getElementById('unicorn1').style.fill = '#1200d6';
+  }
+  else if (zone.value == "tijelo_unicorn6"){
+  document.getElementById('unicorn1').style.fill = '#a31435';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('unicorn1').style.fill = '#B5B7BB';
+  }
+}
+
+function obojiDetaljeUnicorn() {
+
+var zone = document.getElementById("detalji_unicorn");
+
+  if (zone.value == "detalji_unicorn1"){
+  document.getElementById('unicorn0').style.fill = '#f5ceed';
+  }
+  else if (zone.value == "detalji_unicorn2"){
+  document.getElementById('unicorn0').style.fill = '#17e339';
+  }
+  else if (zone.value == "detalji_unicorn3"){
+  document.getElementById('unicorn0').style.fill = '#9dfcfc';
+  }
+  else if (zone.value == "detalji_unicorn4"){
+  document.getElementById('unicorn0').style.fill = '#eaffc7';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('unicorn0').style.fill = '#B5B7BB';
+  }
+}
+
+function obojiKamenUnicorn() {
+
+var zone = document.getElementById("kamen_unicorn");
+
+  if (zone.value == "kamen_unicorn1"){
+  document.getElementById('unicorn2').style.fill = '#1d1e1f';
+  }
+  else if (zone.value == "kamen_unicorn2"){
+  document.getElementById('unicorn2').style.fill = '#c1c3c7';
+  }
+  else if (zone.value == "kamen_unicorn3"){
+  document.getElementById('unicorn2').style.fill = '#546a94';
+  }
+  else if (zone.value == "default"){
+  document.getElementById('unicorn2').style.fill = '#B5B7BB';
+  }
+}
 </script>
 

@@ -57,14 +57,14 @@
 <div class="uredi">
 	<div class="select-isti-red">
 	<select class="select" name="kamen" id="kamen" onclick="obojiKamen();">
-		<option>Kamen</option>
+		<option value="default">Kamen</option>
 		<option value="k1">Crna</option>
 		<option value="k2">Siva</option>
 		<option value="k3">Zelena</option>
 		<option value="k4">Plava</option>
 	</select>
 	<select class="select" name="tijeloZaba" id="tijeloZaba" onclick="obojiTijeloZabe();">
-		<option>Tijelo</option>
+		<option value="default">Tijelo</option>
 		<option value="t1">Svijetlo zelena</option>
 		<option value="t2">Tamno zelena</option>
 		<option value="t3">Plava</option>
@@ -73,32 +73,32 @@
 		<option value="t6">Žuta</option>
 	</select>
 	<select class="select" name="oko" id="oko" onclick="obojiOko();">
-		<option>Oči</option>
+		<option value="default">Oči</option>
 		<option value="o1">Žuta</option>
 		<option value="o2">Zelena</option>
 		<option value="o3">Crvena</option>
 	</select>
 	<select class="select" name="skrge" id="skrge" onclick="obojiSkrge();">
-		<option>Škrge</option>
+		<option value="default">Škrge</option>
 		<option value="s1">Crvena</option>
 		<option value="s2">Žuta</option>
 		<option value="s3">Zelena</option>
 	</select>
 	<select class="select" name="detalji" id="detalji" onclick="obojiDetalje();">
-		<option>Detalji</option>
+		<option value="default">Detalji</option>
 		<option value="d1">Svijetlo smeđa</option>
 		<option value="d2">Tamno smeđa</option>
 		<option value="d3">Zelena</option>
 	</select>
 	<select class="select" name="oruzje" id="oruzje" onclick="obojiOruzje();">
-		<option>Oružje</option>
+		<option value="default">Oružje</option>
 		<option value="oruzje1">Tamno plava</option>
 		<option value="oruzje2">Svijetlo plava</option>
 		<option value="oruzje3">Tamno crvena</option>
 		<option value="oruzje4">Ljubičasta</option>
 	</select>
 	<select class="select" name="odjeca" id="odjeca" onclick="obojiOdjecu();">
-		<option>Odjeća</option>
+		<option value="default">Odjeća</option>
 		<option value="odjeca1">Krem</option>
 		<option value="odjeca2">Svijetlo plava</option>
 		<option value="odjeca3">Tamno crvena</option>

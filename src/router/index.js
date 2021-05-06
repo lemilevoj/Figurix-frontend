@@ -123,6 +123,11 @@ const routes = [
     path: '/dragon',
     name: 'dragon',
     component: () => import('../views/dragon.vue')
+  },
+  {
+    path: '/unicorn',
+    name: 'dragon',
+    component: () => import('../views/unicorn.vue')
   }
 ]
 
