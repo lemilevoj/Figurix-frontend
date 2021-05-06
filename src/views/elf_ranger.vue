@@ -58,14 +58,14 @@
 <div class="uredi1">
 	<div class="select-isti-red">
 	<select class="select" name="glava" id="glava" onclick="obojiGlava();">
-		<option>Glava</option>
+		<option value="default">Glava</option>
 		<option value="glava1">Crna</option>
 		<option value="glava2">Siva</option>
 		<option value="glava3">Boja kave</option>
 		<option value="glava4">Bijela</option>
 	</select>
 	<select class="select" name="detalji1" id="detalji1" onclick="obojiDetalje1();">
-		<option>Detalji i oči</option>
+		<option value="default">Detalji i oči</option>
 		<option value="detalji1">Svijetlo zelena</option>
 		<option value="detalji2">Tamno zelena</option>
 		<option value="detalji3">Plava</option>
@@ -74,7 +74,7 @@
 		<option value="detalji6">Žuta</option>
 	</select>
 	<select class="select" name="štit" id="štit" onclick="obojiŠtit();">
-		<option>Gornji štit </option>
+		<option value="default">Gornji štit </option>
 		<option value="or1">Žuta</option>
 		<option value="or2">Zelena</option>
 		<option value="or3">Crvena</option>
@@ -83,23 +83,14 @@
 		<option value="or6">Smeđa</option>
 	</select>
 	<select class="select" name="pojas" id="pojas" onclick="obojiPojas();">
-		<option>Pojas i ostalo</option>
+		<option value="default">Pojas i ostalo</option>
 		<option value="pio1">Crvena</option>
 		<option value="pio2">Žuta</option>
 		<option value="pio3">Zelena</option>
 		<option value="pio4">Plava</option>
 	</select>
-	<select class="select" name="oDetalji" id="oDetalji" onclick="obojiOdetalji();">
-		<option>Ostali detalji</option>
-		<option value="od1">Svijetlo smeđa</option>
-		<option value="od2">Tamno smeđa</option>
-		<option value="od3">Boja kave</option>
-		<option value="od4">Bijela</option>
-		<option value="od5">Svijetlo plava</option>
-		<option value="od6">Ljubičasta</option>
-	</select>
-	<select class="select" name="kosa" id="kosa" onclick="obojiKosa();">
-		<option>Kosa i prijestolje</option>
+	<select class="select" name="kosica" id="kosica" onclick="obojiKosicu();">
+		<option value="default" >Kosa i prijestolje</option>
 		<option value="kip1">Crvena</option>
 		<option value="kip2">Svijetlo plava</option>
 		<option value="kip3">Crna</option>
@@ -107,22 +98,15 @@
 		<option value="kip5">Žuta</option>
 		<option value="kip6">Smeđa</option>
 	</select>
-	<select class="select" name="sjena" id="sjena" onclick="obojiSjena();">
-		<option>Sjene</option>
-		<option value="sjena1">Krem</option>
-		<option value="sjena2">Bijela</option>
-		<option value="sjena3">Crna</option>
-		<option value="sjena4">Siva</option>
-	</select>
 	<select class="select" name="tijelo" id="tijelo" onclick="obojiTijelo();">
-		<option>Tijelo</option>
+		<option value="default">Tijelo</option>
 		<option value="tijelo1">Krem</option>
 		<option value="tijelo2">Bijela</option>
 		<option value="tijelo3">Boja kave</option>
 		<option value="tijelo4">Siva</option>
 	</select>
 	<select class="select" name="gdo" id="gdo" onclick="obojiGdo();">
-		<option>Gornji dio odjeće</option>
+		<option default="default">Gornji dio odjeće</option>
 		<option value="gdo1">Krem</option>
 		<option value="gdo2">Smeđa</option>
 		<option value="gdo3">Zelena</option>
@@ -1365,15 +1349,15 @@
 </template>
 
 <style type="text/css">
-	.pf0{fill-rule:evenodd;clip-rule:evenodd;fill:#EBCCAB;}
-	.pf1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFD248;}
-	.pf2{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F5F5;}
-	.pf3{fill-rule:evenodd;clip-rule:evenodd;fill:#111210;}
+	.pf0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.pf1{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.pf2{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
+	.pf3{fill-rule:evenodd;clip-rule:evenodd;fill:#F4BE6E;}
 	.pf4{fill-rule:evenodd;clip-rule:evenodd;fill:#535353;}
-	.pf5{fill-rule:evenodd;clip-rule:evenodd;fill:#ACB276;}
-	.pf6{fill-rule:evenodd;clip-rule:evenodd;fill:#C6C6C3;}
-	.pf7{fill-rule:evenodd;clip-rule:evenodd;fill:#7C6111;}
-	.pf8{fill-rule:evenodd;clip-rule:evenodd;fill:#318253;}
+	.pf5{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
+	.pf6{fill-rule:evenodd;clip-rule:evenodd;fill:rgb(150, 150, 112);}
+	.pf7{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
+	.pf8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 </style>
 <style>
 
