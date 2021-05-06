@@ -59,10 +59,10 @@
 	<div class="select-isti-red">
 	<select class="select" name="kosa" id="kosa" onclick="obojiKosa();">
 		<option>Kosa i roba</option>
-		<option value="kir1">Žuta</option>
-		<option value="kir2">Siva</option>
-		<option value="kir3">Ljubičasta</option>
-		<option value="kir4">Plava</option>
+		<option value="kir1">Tamno plava</option>
+		<option value="kir2">Tamno siva</option>
+		<option value="kir3">Tamno Ljubičasta</option>
+		<option value="kir4">Boja kave</option>
         <option value="kir5">Tamno Crvena</option>
     </select>
 	<select class="select" name="dip" id="dip" onclick="obojiDip();">
@@ -72,30 +72,6 @@
 		<option value="dip3">Ljubičasta</option>
 		<option value="dip4">Plava</option>
         <option value="dip5">Tamno Crvena</option>
-    </select>
-    	<select class="select" name="siz" id="siz" onclick="obojiSiz();">
-		<option>Svijeća i zvijezda </option>
-		<option value="siz1">Žuta</option>
-		<option value="siz2">Siva</option>
-		<option value="siz3">Ljubičasta</option>
-		<option value="siz4">Plava</option>
-        <option value="siz5">Tamno Crvena</option>
-    </select>
-    	<select class="select" name="krakovi" id="krakovi" onclick="obojiKrakovi();">
-		<option>Krakovi </option>
-		<option value="kr1">Žuta</option>
-		<option value="kr2">Siva</option>
-		<option value="kr3">Ljubičasta</option>
-		<option value="kr4">Plava</option>
-        <option value="kr5">Tamno Crvena</option>
-    </select>
-	<select class="select" name="detkr" id="detkr" onclick="obojiDetkr();">
-		<option>Detalj Kraka </option>
-		<option value="det1">Žuta</option>
-		<option value="det2">Siva</option>
-		<option value="det3">Ljubičasta</option>
-		<option value="det4">Plava</option>
-        <option value="det5">Tamno Crvena</option>
     </select>
     <select class="select" name="lice" id="lice" onclick="obojiLice();">
 		<option>Lice </option>
@@ -110,13 +86,6 @@
 		<option value="sjenaa2">Siva</option>
 		<option value="sjenaa3">Boja kave</option>
 		<option value="sjenaa4">Crna</option>
-    </select>
-     <select class="select" name="detl" id="detl" onclick="obojiDetl();">
-		<option>Detalji lica</option>
-		<option value="detl1">Bijela</option>
-		<option value="detl2">Siva</option>
-		<option value="detl3">Boja kave</option>
-		<option value="detl4">Ljubičasta</option>
     </select>
       <select class="select" name="ispune" id="ispune" onclick="obojiIspune();">
 		<option>Ispune</option>
@@ -1120,15 +1089,15 @@
 </template>
 
 <style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#A54B43;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#19191A;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFF49;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#8E8AB0;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#102FA7;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#FBC4A0;}
-	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#FFF2B3;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#9B9B9B;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#3C1719;}
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#d6d32a;;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#4b4f5e;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
+	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#8d7c7c;}
+	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;;}
 </style>
 <style>
 
