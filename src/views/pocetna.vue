@@ -5,8 +5,8 @@
 			
 			<nav class="navbar navbar-expand-lg ">
 				 <img src="assets/logo2.png"  class="logo">	
-				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
+				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
 				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 					<div class="navbar-nav">
@@ -28,23 +28,17 @@
 					<div class="navbar-nav ml-auto action-buttons">
 						<div class="nav-item dropdown">
 							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form">
-								<form action="/examples/actions/confirmation.php" method="post">
-									<p class="hint-text">Sign in with your social media account</p>
-									<div class="form-group social-btn clearfix">
-										<a href="#" class="btn btn-secondary facebook-btn float-left"><i class="fa fa-facebook"></i> Facebook</a>
-										<a href="#" class="btn btn-secondary twitter-btn float-right"><i class="fa fa-twitter"></i> Twitter</a>
-									</div>
-									<div class="or-seperator"><b>or</b></div>
+							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
+								<form action="/examples/actions/confirmation.php" method="post">	
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username" required="required">
+										<input type="text" class="form-control" placeholder="email" required="required">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" required="required">
+										<input type="password" class="form-control" placeholder="lozinka" required="required">
 									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Login">
+									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
 									<div class="text-center mt-2">
-										<a href="#">Forgot Your password?</a>
+										<a style="color:black" href="#">Niste registrirani?</a>
 									</div>
 								</form>
 							</div>
@@ -73,6 +67,17 @@
 
 
 <style>
+
+.prijava {
+height: 30px;
+color:black;
+margin-left: 78px;
+font-family: 'Varela Round', sans-serif;
+font-size:25px;
+
+
+}
+
 body {
 	font-family: 'Varela Round', sans-serif;
 }
@@ -95,6 +100,14 @@ body {
 	margin: -8px 0;
 	float: left;
 	margin-right: 10px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
 }
 .logo {
 	padding-left: 0;
@@ -179,57 +192,8 @@ body {
 	color: #fff;
 	background: rgb(231, 231, 29)	 !important;
 }
-.navbar .social-btn .btn, .navbar .social-btn .btn:hover {
-	color: #fff;
-	margin: 0;
-	padding: 0 !important;
-	font-size: 13px;
-	border: none;
-	transition: all 0.4s;
-	text-align: center;
-	line-height: 34px;
-	width: 47%;
-	text-decoration: none;
-}
-.navbar .social-btn .facebook-btn {
-	background: yellow;
-}
-.navbar .social-btn .facebook-btn:hover {
-	background: #4676bd;
-}
-.navbar .social-btn .twitter-btn {
-	background: #64ccf1;
-}
-.navbar .social-btn .twitter-btn:hover {
-	background: #4ec7ef;
-}
-.navbar .social-btn .btn i {
-	margin-right: 5px;
-	font-size: 16px;
-	position: relative;
-	top: 2px;
-}
-.or-seperator {
-	margin-top: 32px;
-	text-align: center;
-	border-top: 1px solid #e0e0e0;
-}
-.or-seperator b {
-	color: #666;
-	padding: 0 8px;
-	width: 30px;
-	height: 30px;
-	font-size: 13px;
-	text-align: center;
-	line-height: 26px;
-	background: #fff;
-	display: inline-block;
-	border: 1px solid #e0e0e0;
-	border-radius: 50%;
-	position: relative;
-	top: -15px;
-	z-index: 1;
-}
+
+
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
@@ -249,6 +213,7 @@ body {
 		padding: 10px 15px;
 		background: transparent;
 		border: none;
+	
 	}
 	.navbar .form-inline {
 		display: block;
