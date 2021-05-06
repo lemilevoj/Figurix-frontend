@@ -57,13 +57,13 @@
 <div class="uredi">
 	<div class="select-isti-red">
     <select class="select" name="mElf_Koza" id="mElf_Koza" onclick="obojiKozuElf();">
-		<option>Koža</option>
+		<option value="default">>Koža</option>
 		<option value="mElf_Koza1">Roza</option>
 		<option value="mElf_Koza2">Neutralno plava</option>
 		<option value="mElf_Koza3">Siva</option>
 	</select>
 	<select class="select" name="mElf_Plast" id="mElf_Plast" onclick="obojiPlastElf();">
-		<option>Plašt</option>
+		<option value="default">Plašt</option>
 		<option value="mElf_Plast1">Tamno zelena</option>
 		<option value="mElf_Plast2">Ljubičasta</option>
 		<option value="mElf_Plast3">Tamno smeđa</option>
@@ -71,7 +71,7 @@
         <option value="mElf_Plast5">Ljubičasta</option>
 	</select>
     <select class="select" name="mElf_rukavi" id="mElf_rukavi" onclick="obojiRukave();">
-		<option>Rukavi</option>
+		<option value="default">Rukavi</option>
 		<option value="mElf_rukavi1">Svijetlo zelena</option>
 		<option value="mElf_rukavi2">Tamno zelena</option>
 		<option value="mElf_rukavi3">Tamno crvena</option>
@@ -79,7 +79,7 @@
         <option value="mElf_rukavi5">Smeđa</option>
 	</select>
     <select class="select" name="mElf_cizme" id="mElf_cizme" onclick="obojiCizme();">
-		<option>Čizme i hlače</option>
+		<option value="default">Čizme i hlače</option>
 		<option value="mElf_cizme1">Tamno smeđa</option>
 		<option value="mElf_cizme2">Svijetlo smeđa</option>
 		<option value="mElf_cizme3">Siva</option>
