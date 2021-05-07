@@ -4,8 +4,8 @@
 			
 			<nav class="navbar navbar-expand-lg ">
 				 <img src="assets/logo2.png"  class="logo">	
-				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
+				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
 				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 					<div class="navbar-nav">
@@ -27,23 +27,17 @@
 					<div class="navbar-nav ml-auto action-buttons">
 						<div class="nav-item dropdown">
 							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form">
-								<form action="/examples/actions/confirmation.php" method="post">
-									<p class="hint-text">Sign in with your social media account</p>
-									<div class="form-group social-btn clearfix">
-										<a href="#" class="btn btn-secondary facebook-btn float-left"><i class="fa fa-facebook"></i> Facebook</a>
-										<a href="#" class="btn btn-secondary twitter-btn float-right"><i class="fa fa-twitter"></i> Twitter</a>
-									</div>
-									<div class="or-seperator"><b>or</b></div>
+							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
+								<form action="/examples/actions/confirmation.php" method="post">	
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username" required="required">
+										<input type="text" class="form-control" placeholder="email" required="required">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" required="required">
+										<input type="password" class="form-control" placeholder="lozinka" required="required">
 									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Login">
+									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
 									<div class="text-center mt-2">
-										<a href="#">Forgot Your password?</a>
+										<a style="color:black" href="#">Niste registrirani?</a>
 									</div>
 								</form>
 							</div>
@@ -2734,6 +2728,13 @@
 .search-box i {
 	color: #a0a5b1;
 	font-size: 19px;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
 }
 .navbar .sign-up-btn {
 	min-width: 110px;

@@ -49,7 +49,7 @@
 			</nav>
 		</div>
 		<ul class="cb-slideshow">
-            <li><span>Image 01</span><div class="pozicija"><h4 class="font1">Za sve <h1 class="font2">kolekcionare</h1> društvenih i kartaških igara</h4></div></li>
+            <li><span>Image 01</span><div class="pozicija"><h4 class="font1">Za sve <h1 class="font2">kolekcionare </h1>društvenih i kartaških igara</h4></div></li>
             <li><span>Image 02</span><div class="pozicija"><h4 class="font1">Izradite svoje <h1 class="font2">figurice!</h1></h4></div></li>
             <li><span>Image 03</span><div class="pozicija"><h4 class="font1">Informirajte se o svim najboljim <h1 class="font2">događajima</h1> u svijetu društvenih igara!</h4></div></li>
             <li><span>Image 04</span><div class="pozicija"><h4 class="font1">Podijelite <h1 class="font2">iskustva</h1> u igranju svojih igara</h4></div></li>
@@ -201,6 +201,7 @@ body {
 	position: relative;
 	top: 1px;
 }
+
 @media (min-width: 1200px){
 	.form-inline .input-group {
 		width: 300px;
@@ -237,6 +238,20 @@ body {
 	display:inline;
 	-webkit-text-stroke: 1.5px black;
 	color:rgb(231, 231, 29);
+}
+
+
+@media (max-width: 768px){
+    .font1{
+        font-size:20px;
+        -webkit-text-stroke: 1px black;
+    }
+}
+@media (max-width: 768px){
+    .font2{
+        font-size:20px;
+        -webkit-text-stroke: 1px black;
+    }
 }
 .pozicija{
 	margin-bottom:120px;
