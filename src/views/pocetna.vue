@@ -243,13 +243,13 @@ body {
 
 @media (max-width: 768px){
     .font1{
-        font-size:20px;
+        font-size:25px;
         -webkit-text-stroke: 1px black;
     }
 }
 @media (max-width: 768px){
     .font2{
-        font-size:20px;
+        font-size:25px;
         -webkit-text-stroke: 1px black;
     }
 }
