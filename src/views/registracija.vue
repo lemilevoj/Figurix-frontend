@@ -346,6 +346,7 @@ export default {
 	.navbar .input-group {
 		width: 100%;
 	}
+
 }
 html {
   height: 100%;
@@ -360,14 +361,20 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 550px;
+  width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: black;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
+  z-index: -1;
 }
+
+.navigacija {
+  z-index: 99;
+}
+
 .login-box h2 {
   margin: 0 0 30px;
   padding: 0;
