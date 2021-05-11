@@ -293,12 +293,19 @@ body {
   padding: 30px;
   margin:auto;
 }
+
+
+
 @media screen and (max-width: 760px) {
   .l-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
+@media screen and (max-width: 500px) {
+  .l-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 @media screen and (min-width: 2300px) {
   .l-container {
 	max-width:none;
@@ -376,5 +383,10 @@ body {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	-webkit-text-stroke: 1.2px black;
 	font-size: 27px;
+}
+@media screen and (max-width:1000px){
+	.ime_figure{
+		font-size:17px;
+	}
 }
 </style>
