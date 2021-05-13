@@ -126,7 +126,7 @@ const routes = [
   },
   {
     path: '/unicorn',
-    name: 'dragon',
+    name: 'unicorn',
     component: () => import('../views/unicorn.vue')
   }
 ]

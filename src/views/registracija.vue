@@ -49,18 +49,47 @@
 		</div>
 <div class="login-box">
   <h2 class="naslov">Registracija</h2>
-  <form>
+  <form @submit.prevent="signup">
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input 
+            v-model="korisnicko_ime" 
+            type="text" 
+            name="" 
+            required="" 
+            oninvalid="this.setCustomValidity('Ime je obavezno.')" 
+            onchange="this.setCustomValidity('')"
+      />
+
       <label>Korisničko ime</label>
     </div>
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input
+            v-model="email" 
+            type="text" 
+            name="" 
+            required="" 
+            oninvalid="this.setCustomValidity('Ime je obavezno.')" 
+            onchange="this.setCustomValidity('')"
+      />
       <label>Email</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input 
+            v-model="lozinka" 
+            type="password" 
+            name="" 
+            required=""
+      />
       <label>Lozinka</label>
+    </div>
+    <div class="user-box">
+      <input 
+            v-model="lozinka2" 
+            type="password" 
+            name="" 
+            required=""
+      />
+      <label>Ponovi lozinku</label>
     </div>
     <a href="#">
       <span></span>
@@ -75,6 +104,38 @@
 </template>
 
 <script>
+//proba nekakva
+
+/*
+export default{
+  data(){
+    return {
+      korisnicko_ime: "",
+      email: "",
+      lozinka: "",
+      lozinka2: "",
+    };
+  },
+
+  methods: {
+    async signup(){
+      if (
+        this.lozinka !== this.lozinka2 ||
+        this.lozinka2 !== this.lozinka
+      ) {
+        alert("Lozinke se ne podudaraju!");
+        console.log(error);
+      }
+      let a = {
+          korisnicko_ime: this.korisnicko_ime,
+          email: this.email,
+          lozinka: this.lozinka,
+          lozinka2: this.lozinka2,
+      };
+    }
+  }
+
+};*/
 /*
 jQuery(document).ready(function($){
             $("#submit").click(function(){
@@ -368,7 +429,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .navigacija {
