@@ -98,8 +98,8 @@ body {
 	background-color: black;
 	padding-left: 16px;
 	padding-right: 16px;
-	
 	border-radius: 0;
+	
 }
 .navigacija{
 	position:fixed;

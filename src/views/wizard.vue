@@ -4217,8 +4217,12 @@
 	background-color: black;
 	padding-left: 16px;
 	padding-right: 16px;
-	
 	border-radius: 0;
+}
+.navigacija{
+	position:fixed;
+	z-index:99;
+	width:100%;
 }
 .nav-link img {
 	border-radius: 50%;

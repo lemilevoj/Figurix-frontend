@@ -1393,11 +1393,15 @@
 .custom-toggler.navbar-toggler {
   border-color: white;
 }
+.navigacija{
+	position:fixed;
+	z-index:99;
+	width:100%;
+}
 .navbar {
 	background-color: black;
 	padding-left: 16px;
 	padding-right: 16px;
-	
 	border-radius: 0;
 }
 .nav-link img {
