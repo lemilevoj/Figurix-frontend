@@ -30,10 +30,10 @@
 							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
 								<form action="/examples/actions/confirmation.php" method="post">	
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="email" required="required">
+										<input type="text"  class="form-control"  placeholder="email" required="required">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="lozinka" required="required">
+										<input type="password"  class="form-control"  placeholder="lozinka" required="required">
 									</div>
 									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
 									<div class="text-center mt-2">
@@ -49,15 +49,16 @@
 		</div>
 <div class="login-box">
   <h2 class="naslov">Registracija</h2>
-  <form @submit.prevent="signup">
+  <form>
     <div class="user-box">
       <input 
-            v-model="korisnicko_ime" 
+            v-model="korisnickoIme" 
             type="text" 
             name="" 
             required="" 
             oninvalid="this.setCustomValidity('Ime je obavezno.')" 
             onchange="this.setCustomValidity('')"
+            id="KorisnickoIme"
       />
 
       <label>Korisničko ime</label>
@@ -68,6 +69,7 @@
             type="text" 
             name="" 
             required="" 
+            id="Email"
             oninvalid="this.setCustomValidity('Ime je obavezno.')" 
             onchange="this.setCustomValidity('')"
       />
@@ -79,6 +81,7 @@
             type="password" 
             name="" 
             required=""
+            id="Lozinka"
       />
       <label>Lozinka</label>
     </div>
@@ -88,6 +91,7 @@
             type="password" 
             name="" 
             required=""
+            id="Lozinka2"
       />
       <label>Ponovi lozinku</label>
     </div>
@@ -96,7 +100,7 @@
       <span></span>
       <span></span>
       <span></span>
-      Registriraj se
+      <button @click="signup()">  Registriraj se </button>
     </a>
   </form>
 </div>
@@ -104,38 +108,45 @@
 </template>
 
 <script>
-//proba nekakva
+import {Auth} from '@/services';
 
-/*
 export default{
+  name: 'registracija',
   data(){
     return {
-      korisnicko_ime: "",
+      korisnickoIme: "",
       email: "",
       lozinka: "",
       lozinka2: "",
     };
   },
-
-  methods: {
+   methods: {
     async signup(){
-      if (
+        let success = await Auth.login(this.email, this.lozinka);
+        console.log('Rezultat prijave', success);
+        if(success == true){
+          this.$router.push({path: '/'})
+         if (
         this.lozinka !== this.lozinka2 ||
         this.lozinka2 !== this.lozinka
       ) {
         alert("Lozinke se ne podudaraju!");
         console.log(error);
       }
-      let a = {
-          korisnicko_ime: this.korisnicko_ime,
+      let user = {
+          korisnickoIme: this.korisnickoIme,
           email: this.email,
           lozinka: this.lozinka,
           lozinka2: this.lozinka2,
       };
+       let newuser = await Auth.registracija(user);
+        console.log('Registriran je korisnik', newuser.data);
+        }
     }
-  }
+  },
+}
 
-};*/
+
 /*
 jQuery(document).ready(function($){
             $("#submit").click(function(){
