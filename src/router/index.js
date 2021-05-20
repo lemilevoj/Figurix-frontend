@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Pocetna from '../views/pocetna.vue'
+import {Auth} from '@/services';
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -138,10 +140,18 @@ const router = new VueRouter({
 })
 
 
-router.beforeEach((to, from, next)=>{
-  next();
+/* router.beforeEach((to, from, next)=>{
+
+
+const user = Auth.getUser();
+
+  if(!user){ //ako je login potreban i nemamo korisnika onda ne zelimo ici na next
+    next('/pocetna'); 
+    return 
+  }
+  
+  next()
 })
-
-
+*/
 
 export default router

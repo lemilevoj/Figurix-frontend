@@ -1,6 +1,5 @@
 <template>
 	<div class="pocetna">
-	
 		<div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
@@ -25,16 +24,17 @@
 							</div>
 						</div>
 					</form>
+                    
 					<div class="navbar-nav ml-auto action-buttons">
 						<div class="nav-item dropdown">
 							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
 							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
 								<form action="/examples/actions/confirmation.php" method="post">	
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="email" required="required">
+										<input type="text" v-model="email" class="form-control" id="exampleInputEmail" placeholder="email" required="required">
 									</div>
 									<div class="form-group">
-										<input type="password" class="form-control" placeholder="lozinka" required="required">
+										<input type="password" v-model="lozinka" class="form-control" id="exampleInputLozinka" placeholder="lozinka" required="required">
 									</div>
 									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
 									<div class="text-center mt-2">
@@ -64,6 +64,28 @@
   	</div>
 </template>
 
+<script>
+import {Auth} from '@/services';
+
+export default {
+   data() {
+    return {
+      email: '',
+      lozinka:'',
+    };
+  },
+   methods: {
+      async login(){
+        let success = await Auth.login(this.email, this.lozinka);
+        console.log('Rezultat prijave', success);
+        if(success == true){
+          this.$router.push({path: '/'})
+        }
+      }
+    },
+}
+
+</script>
 
 
 <style>

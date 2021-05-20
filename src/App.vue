@@ -5,6 +5,27 @@
   </div>
 </template>
 
+<script>
+import {Auth} from "@/services";
+
+export default {
+  data(){
+    return{
+      auth: Auth.state,   //dovlaci iz jednog objekta u drugi objekt neke kljuceve, varijable...
+      user: {},
+    };
+  },
+
+  methods:{
+    logout(){
+      Auth.logout();
+      this.$router.go(); //za osvjezavanje
+    },
+  },
+}
+
+</script>
+
 
 <style lang="scss">
 #app {
@@ -27,3 +48,4 @@
     }
   }
 }
+
