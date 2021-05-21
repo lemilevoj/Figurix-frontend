@@ -1,9 +1,9 @@
 <template>
-<div>
+<div class="">
   <div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
-				 <img src="assets/logo2.png"  class="logo">	
+				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>
 				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
@@ -100,7 +100,7 @@
       <span></span>
       <span></span>
       <span></span>
-      <button @click="signup()">  Registriraj se </button>
+      <button class="animacijaGumba" @click="signup()">  Registriraj se </button>
     </a>
   </form>
 </div>
@@ -213,6 +213,22 @@ export default {
 
 
 <style>
+.animacijaGumba{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(248, 235, 54);
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+   background-color:transparent;
+   border: none;
+}
+
+
 .select{
 	display:block;
 	width:150px;
@@ -435,7 +451,7 @@ body {
 }
 .login-box {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   width: 400px;
   padding: 40px;
@@ -446,7 +462,11 @@ body {
   border-radius: 10px;
   z-index: 1;
 }
-
+@media (max-width: 800px){
+    body {
+    background: black;
+    }
+}
 .navigacija {
   z-index: 99;
 }

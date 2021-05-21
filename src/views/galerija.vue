@@ -3,7 +3,7 @@
     <div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
-				 <img src="assets/logo2.png"  class="logo">	
+				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
 				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
@@ -119,6 +119,7 @@
 	position:fixed;
 	z-index:99;
 	width:100%;
+	top:0px;
 }
 
 .nav-link img {
@@ -295,6 +296,7 @@
         position:relative;
         background-repeat: no-repeat;
         background-size: cover;
+		margin-top:40px;
     }
     .lead{
         text-indent: -9999px;

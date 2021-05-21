@@ -3,7 +3,7 @@
     <div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
-				 <img src="assets/logo2.png"  class="logo">	
+				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>
 				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
@@ -2633,6 +2633,9 @@
 </svg>
 
     </div>
+	<div class="pozgumba">
+		<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
+	</div>
     </div> 
 </template>
 
@@ -2648,10 +2651,15 @@
 	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 </style>
 <style>
-
+.pozgumba{
+	margin-left:15px;
+}
+.gumb{
+	padding:10px;
+}
 .uredi{
 	display:flex;
-	position:absolute;
+	position:relative;
 }
 
 .select{
@@ -2676,6 +2684,7 @@
 .shape{
     width:500px;
     height:500px;
+	margin-top:30px;
 }
 .navbar {
 	background-color: black;

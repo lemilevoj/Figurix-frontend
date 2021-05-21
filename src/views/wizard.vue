@@ -3,7 +3,7 @@
     <div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
-				 <img src="assets/logo2.png"  class="logo">	
+				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
 				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 					<span class="navbar-toggler-icon custom-toggler"></span>
 				</button>
@@ -4151,6 +4151,9 @@
 
 
     </div>
+	<div class="pozgumba">
+		<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
+	</div>
     </div> 
 </template>
 
@@ -4177,10 +4180,16 @@
 
 </style>
 <style>
+.pozgumba{
+	margin-left:15px;
+}
+.gumb{
+	padding:10px;
+}
 
 .uredi{
 	display:flex;
-	position:absolute;
+	position:relative;
 }
 
 .select{
@@ -4205,6 +4214,12 @@
 .shape{
     width:500px;
     height:500px;
+	margin-top:70px;
+}
+@media (max-width: 800px){
+	.shape{
+		margin-top:0px;
+	}
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
