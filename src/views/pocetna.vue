@@ -29,14 +29,15 @@
 						<div class="nav-item dropdown">
 							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
 							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
-								<form action="/examples/actions/confirmation.php" method="post">	
+								<form action="/examples/actions/confirmation.php" method="post" id="formaPrijave">	
 									<div class="form-group">
 										<input type="text" v-model="email" class="form-control" id="exampleInputEmail" placeholder="email" required="required">
 									</div>
 									<div class="form-group">
 										<input type="password" v-model="lozinka" class="form-control" id="exampleInputLozinka" placeholder="lozinka" required="required">
 									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
+                                    <p id="poruka"></p>
+									<input type="submit" class="btn btn-primary btn-block" value="Prijava" @click.prevent="login()">
 									<div class="text-center mt-2">
 										<a style="color:black" href="#">Niste registrirani?</a>
 									</div>
@@ -66,21 +67,35 @@
 
 <script>
 import {Auth} from '@/services';
-
+import store from '@/store.js'
 export default {
    data() {
     return {
       email: '',
       lozinka:'',
+      Auth
     };
   },
    methods: {
       async login(){
-        let success = await Auth.login(this.email, this.lozinka);
-        console.log('Rezultat prijave', success);
-        if(success == true){
-          this.$router.push({path: '/'})
+        store.authenticated = true;
+        console.log("pokusaj prijave")
+        if(this.email=='' || this.lozinka==''){
+           document.getElementById('poruka').innerHTML = "Polja su prazna!";
         }
+        else{
+            let success = await Auth.login(this.email, this.lozinka);
+            console.log('Rezultat prijave', success);
+            if(success == true){
+                document.getElementById("exampleInputEmail").value = '';
+                document.getElementById("exampleInputLozinka").value = '';
+                console.log(this.email,this.lozinka)
+            }
+            else{
+                console.log("Nije uspjelo")
+            }
+        }
+        console.log(store.authenticated)
       }
     },
 }
@@ -99,7 +114,9 @@ font-size:25px;
 
 
 }
-
+#poruka{
+    color:red;
+}
 body {
 	font-family: 'Varela Round', sans-serif;
 }

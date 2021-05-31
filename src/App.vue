@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    
+    <!--<button @click="funkcija()"></button>-->
     <router-view />
+    
   </div>
 </template>
 
 <script>
 import {Auth} from "@/services";
-
+import store from '@/store.js';
 export default {
   data(){
     return{
       auth: Auth.state,   //dovlaci iz jednog objekta u drugi objekt neke kljuceve, varijable...
       user: {},
+      store,
     };
+    
   },
-
+  
   methods:{
+    
     logout(){
       Auth.logout();
       this.$router.go(); //za osvjezavanje
     },
+    funkcija(){
+      console.log(store.authenticated)
+      console.log(store.email)
+      console.log(store.korisnickoIme)
+    },
+    
   },
-}
+
+  
+};
+
 
 </script>
 

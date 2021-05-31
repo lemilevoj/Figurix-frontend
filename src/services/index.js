@@ -32,66 +32,18 @@ Service.interceptors.response.use(
 );
 
 
- /* let Posts = {    
-
-    async getAllComment(jobId) {
-        let response = await Service.get(`/jobs/${jobId}/comments`);
-        return response.data.map(doc => {
-            
-                return {
-                    id: doc._id,
-                    jobId: doc.Idjoba,
-                    posted_at: Number(doc.postedAt),
-                    komentar: doc.komentar,
-                    ime: doc.ime,
-                    prezime: doc.prezime
-                };
-            
-        });
-    }, 
-    
-    async getAll() {        
-        let response = await Service.get(`/jobs`)
-        let data = response.data
-        data = data.map(doc =>{
-            return {
-                id:doc._id,
-                ime: doc.ime,
-                prezime: doc.prezime,
-                naziv_posla: doc.naziv_posla,
-                kategorija_posla: doc.kategorija_posla,
-                opis_posla: doc.opis_posla,
-                potrebne_vjestine: doc.potrebne_vjestine,
-                zarada: doc.zarada,
-                posted_at: Number (doc.posted_at)
-            
-            };
-        });
-        return data
-    },
-    async getOne(id){
-        let response = await Service.get(`/jobs/${id}`);
-        let doc = response.data;
-        return {
-            id:doc._id,
-            ime: doc.ime,
-            prezime: doc.prezime,
-            naziv_posla: doc.naziv_posla,
-            kategorija_posla: doc.kategorija_posla,
-            opis_posla: doc.opis_posla,
-            potrebne_vjestine: doc.potrebne_vjestine,
-            zarada: doc.zarada,
-            posted_at: Number(doc.posted_at),
-            email: doc.email
-
-            
-        };
-    }, 
-} */
 
 
 let Auth = {
-    
+
+ 
+    dohvatBackend() {
+        return Service.get ("/galerija")
+    },
+    async signup(korisnickoIme,email,lozinka,lozinka2) {
+        let post=await Service.post('/registracija', korisnickoIme,email,lozinka,lozinka2);
+        return post
+    },
     async login(email, lozinka){
         let response = await Service.post("/auth",{
            email: email,
@@ -101,9 +53,6 @@ let Auth = {
         localStorage.setItem("user", JSON.stringify(user)); 
 
         return true;
-    },
-    registracija(user) {
-        return Service.post('/user', user);
     },
     logout(){
       localStorage.removeItem("user");
@@ -127,6 +76,12 @@ let Auth = {
         }
         else{
             return false
+        }
+    },
+    profil(){
+        let user = Auth.getUser()
+        if(user){
+            return user
         }
     },
     state: {

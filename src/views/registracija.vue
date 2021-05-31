@@ -85,6 +85,7 @@
       />
       <label>Lozinka</label>
     </div>
+    
     <div class="user-box">
       <input 
             v-model="lozinka2" 
@@ -94,13 +95,16 @@
             id="Lozinka2"
       />
       <label>Ponovi lozinku</label>
+      <p id="porukaPassword"></p>
+      <p id="podudaranjePassword"></p>
     </div>
+    <p id="poruka2"></p>
     <a href="#">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      <button class="animacijaGumba" @click="signup()">  Registriraj se </button>
+      <button class="animacijaGumba" @click.prevent="registracija(korisnickoIme,email,lozinka,lozinka2)">  Registriraj se </button>
     </a>
   </form>
 </div>
@@ -118,11 +122,13 @@ export default{
       email: "",
       lozinka: "",
       lozinka2: "",
+      Auth,
     };
   },
    methods: {
-    async signup(){
-        let success = await Auth.login(this.email, this.lozinka);
+     
+    /*async signup(){
+        let success = await Auth.signup(this.email, this.lozinka);
         console.log('Rezultat prijave', success);
         if(success == true){
           this.$router.push({path: '/'})
@@ -142,7 +148,43 @@ export default{
        let newuser = await Auth.registracija(user);
         console.log('Registriran je korisnik', newuser.data);
         }
-    }
+    },*/
+
+    async registracija(korisnickoIme,email,lozinka,lozinka2) {
+
+        
+        if (korisnickoIme=='' || email=='' || lozinka=='' || lozinka2==''){
+          document.getElementById('poruka2').innerHTML = "Polja su prazna!";
+        }
+        let pass = document.getElementById("Lozinka")
+        let pass2 = document.getElementById("Lozinka2")
+        if (lozinka !== lozinka2 || lozinka2 !== lozinka) {
+          document.getElementById('podudaranjePassword').innerHTML ="Lozinke se ne podudaraju!";
+          console.log(error);
+        }
+        else if(pass.value.length <=5 || pass2.value.length <=5){
+          document.getElementById('porukaPassword').innerHTML = "Unesite 6 ili više znakova!";
+        }
+      else{
+        let podaci = {
+            korisnickoIme:korisnickoIme,
+            email:email, 
+            lozinka:lozinka,
+            lozinka2:lozinka2,
+        }
+        
+        console.log(podaci)
+        await Auth.signup(podaci).then(() => {
+            this.$router.push({ path: '/' });
+        });
+        }
+      }
+      /*
+      Auth.registracijaBackend(podaci);
+      */
+      
+    
+     
   },
 }
 
@@ -213,6 +255,15 @@ export default {
 
 
 <style>
+#porukaPassword{
+  color:rgb(248, 235, 54);
+}
+#podudaranjePassword{
+  color:rgb(248, 235, 54);
+}
+#poruka2{
+  color:rgb(248, 235, 54);
+}
 .animacijaGumba{
     position: relative;
     display: inline-block;
@@ -481,6 +532,21 @@ body {
 .login-box .user-box {
   position: relative;
 }
+input[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
