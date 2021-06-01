@@ -43,6 +43,7 @@ let Auth = {
     async signup(korisnickoIme,email,lozinka,lozinka2) {
         let post=await Service.post('/registracija', korisnickoIme,email,lozinka,lozinka2);
         return post
+
     },
     async login(email, lozinka){
         let response = await Service.post("/auth",{

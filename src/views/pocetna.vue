@@ -1,5 +1,5 @@
 <template>
-	<div class="pocetna">
+	<div class="pocetna"> <!--
 		<div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
@@ -48,7 +48,7 @@
 					</div>
 				</div>
 			</nav>
-		</div>
+		</div> -->
 		<ul class="cb-slideshow">
             <li><span>Image 01</span><div class="pozicija"><h4 class="font1">Za sve <h1 class="font2">kolekcionare </h1>društvenih i kartaških igara</h4></div></li>
             <li><span>Image 02</span><div class="pozicija"><h4 class="font1">Izradite svoje <h1 class="font2">figurice!</h1></h4></div></li>
@@ -70,13 +70,13 @@ import {Auth} from '@/services';
 import store from '@/store.js'
 export default {
    data() {
-    return {
+    return { /*
       email: '',
-      lozinka:'',
+      lozinka:'', */
       Auth
     };
   },
-   methods: {
+ /*  methods: { 
       async login(){
         store.authenticated = true;
         console.log("pokusaj prijave")
@@ -97,8 +97,8 @@ export default {
         }
         console.log(store.authenticated)
       }
-    },
-}
+    },  */
+} 
 
 </script>
 

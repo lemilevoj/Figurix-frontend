@@ -1,5 +1,5 @@
 <template>
-<div class="">
+<div class="">  <!--
   <div class="navigacija">
 			
 			<nav class="navbar navbar-expand-lg ">
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 			</nav>
-		</div>
+		</div> -->
 <div class="login-box">
   <h2 class="naslov">Registracija</h2>
   <form>
