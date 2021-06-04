@@ -104,6 +104,18 @@ export default {
 
 
 <style>
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
 
 .prijava {
 height: 30px;
@@ -114,6 +126,19 @@ font-size:25px;
 
 
 }
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
+
 #poruka{
     color:red;
 }
@@ -129,7 +154,6 @@ body {
 	background-color: black;
 	padding-left: 16px;
 	padding-right: 16px;
-	
 	border-radius: 0;
 }
 .navigacija{

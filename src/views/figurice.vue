@@ -1,77 +1,31 @@
 <template>
 <div class="ck">
-<div class="navigacija">
-			
-			<nav class="navbar navbar-expand-lg ">
-				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
-				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon custom-toggler"></span>
-				</button>
-				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
-					</div>
-					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
-					</form>
-					<div class="navbar-nav ml-auto action-buttons">
-						<div class="nav-item dropdown">
-							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
-								<form action="/examples/actions/confirmation.php" method="post">	
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="email" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="lozinka" required="required">
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
-									<div class="text-center mt-2">
-										<a style="color:black" href="#">Niste registrirani?</a>
-									</div>
-								</form>
-							</div>
-						</div>
-							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
-					</div>
-				</div>
-			</nav>
-		</div>
+
 
     <div class="l-container">
         <div class="b-game-card">
-            <a href="/humanoid_frog"><div class="b-game-card__cover" style="background-image: url(/assets/humanoid_frog.jpg);"><h1 class="ime_figure">Humanoid Frog</h1></div></a>
+            <router-link to="/humanoid_frog"><div class="b-game-card__cover" style="background-image: url(/assets/humanoid_frog.jpg);"><h1 class="ime_figure">Humanoid Frog</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/elf_ranger"><div class="b-game-card__cover" style="background-image: url(/assets/elf_ranger.jpg);"><h1 class="ime_figure">Elf Ranger</h1></div></a>
+            <router-link to="/elf_ranger"><div class="b-game-card__cover" style="background-image: url(/assets/elf_ranger.jpg);"><h1 class="ime_figure">Elf Ranger</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/wendy_adams"><div class="b-game-card__cover" style="background-image: url(/assets/wendy_adams.jpg);"><h1 class="ime_figure">Wendy Adams</h1></div></a>
+            <router-link to="/wendy_adams"><div class="b-game-card__cover" style="background-image: url(/assets/wendy_adams.jpg);"><h1 class="ime_figure">Wendy Adams</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/dragon"><div class="b-game-card__cover" style="background-image: url(/assets/zmaj.png);"><h1 class="ime_figure">Adorable Dragon</h1></div></a>
+            <router-link to="/dragon"><div class="b-game-card__cover" style="background-image: url(/assets/zmaj.png);"><h1 class="ime_figure">Adorable Dragon</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/naruto"><div class="b-game-card__cover" style="background-image: url(/assets/naruto.png);"><h1 class="ime_figure">Naruto</h1></div></a>
+            <router-link to="/naruto"><div class="b-game-card__cover" style="background-image: url(/assets/naruto.png);"><h1 class="ime_figure">Naruto</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/unicorn"><div class="b-game-card__cover" style="background-image: url(/assets/unicorn.png);"><h1 class="ime_figure">Unicorn</h1></div></a>
+            <router-link to="/unicorn"><div class="b-game-card__cover" style="background-image: url(/assets/unicorn.png);"><h1 class="ime_figure">Unicorn</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/meleeElf"><div class="b-game-card__cover" style="background-image: url(/assets/melee_elf_female.png);"><h1 class="ime_figure">Mele elf female</h1></div></a>
+            <router-link to="/meleeElf"><div class="b-game-card__cover" style="background-image: url(/assets/melee_elf_female.png);"><h1 class="ime_figure">Mele elf female</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/wizard"><div class="b-game-card__cover" style="background-image: url(/assets/wizard.png);"><h1 class="ime_figure">Wizard</h1></div></a>
+            <router-link to="/wizard"><div class="b-game-card__cover" style="background-image: url(/assets/wizard.png);"><h1 class="ime_figure">Wizard</h1></div></router-link>
         </div>
     </div>
 
@@ -79,6 +33,18 @@
 </template>
 
 <style>
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }

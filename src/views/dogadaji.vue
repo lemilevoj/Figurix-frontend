@@ -1,52 +1,6 @@
 <template>
 <div class="ck">
-<div class="navigacija">
-			
-			<nav class="navbar navbar-expand-lg ">
-				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>
-				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon custom-toggler"></span>
-				</button>
-				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
-					</div>
-					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
-					</form>
-					<div class="navbar-nav ml-auto action-buttons">
-						<div class="nav-item dropdown">
-							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
-								<form action="/examples/actions/confirmation.php" method="post">	
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="email" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="lozinka" required="required">
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
-									<div class="text-center mt-2">
-										<a style="color:black" href="#">Niste registrirani?</a>
-									</div>
-								</form>
-							</div>
-						</div>
-							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
-					</div>
-				</div>
-			</nav>
-</div>
+
 
     <div class="l-container">
         <div class="b-game-card">
@@ -91,15 +45,27 @@
 </template>
 
 <style>
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
 .ck{
 	padding-bottom:100px;
 }
 .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .custom-toggler.navbar-toggler {
-  border-color: white;
+  	border-color: white;
 }
 body {
 	font-family: 'Varela Round', sans-serif;

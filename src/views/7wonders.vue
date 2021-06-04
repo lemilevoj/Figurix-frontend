@@ -1,76 +1,6 @@
 <template>
 <div>
-<div class="navigacija">
-			<nav class="navbar navbar-expand-lg ">
-				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
-				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
-					</div>
-					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
-					</form>
-					<div class="navbar-nav ml-auto action-buttons">
-						<div class="nav-item dropdown">
-							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form">
-								<form action="/examples/actions/confirmation.php" method="post">
-									<p class="hint-text">Sign in with your social media account</p>
-									<div class="form-group social-btn clearfix">
-										<a href="#" class="btn btn-secondary facebook-btn float-left"><i class="fa fa-facebook"></i> Facebook</a>
-										<a href="#" class="btn btn-secondary twitter-btn float-right"><i class="fa fa-twitter"></i> Twitter</a>
-									</div>
-									<div class="or-seperator"><b>or</b></div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" required="required">
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Login">
-									<div class="text-center mt-2">
-										<a href="#">Forgot Your password?</a>
-									</div>
-								</form>
-							</div>
-						</div>
-						
-							<a href="/registracija" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Registracija</a>
-							<div class="dropdown-menu action-form">
-								<form action="/examples/actions/confirmation.php" method="post">
-									<p class="hint-text">Fill in this form to create your account!</p>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Username" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Password" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" class="form-control" placeholder="Confirm Password" required="required">
-									</div>
-									<div class="form-group">
-										<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Sign up">
-								</form>
-							</div>
-					</div>
-				</div>
-			</nav>
-		</div>
+
 
 <div class="row">
   <div id="admin" class="col s12">
@@ -311,7 +241,18 @@ $(document).ready(function() {
 
 
 <style >
-
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
 div.material-table {
   padding: 0;
 }

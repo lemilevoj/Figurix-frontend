@@ -2,6 +2,7 @@
 <div>
   <div id="app">
     <!--<button @click="funkcija()"></button>-->
+	
     <router-view />
   </div>
       <div class="navigacija">
@@ -12,10 +13,10 @@
 				</button>
 				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
+						<router-link to="/" class="nav-item nav-link">Početna</router-link>
+						<router-link to="/dogadaji" class="nav-item nav-link">Događaji</router-link>			
+						<router-link to="/figurice" class="nav-item nav-link active">Figurice</router-link>
+						<router-link to="/galerija" class="nav-item nav-link">Galerija</router-link>
 					</div>
 					<form class="navbar-form form-inline">
 						<div class="input-group search-box">								
@@ -28,10 +29,11 @@
 						</div>
 					</form>
                     
-					<div class="navbar-nav ml-auto action-buttons">
+					<div class="navbar-nav ml-auto action-buttons" v-if="!store.authenticated">
 						<div class="nav-item dropdown">
 							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
 							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
+
 								<form action="/examples/actions/confirmation.php" method="post" id="formaPrijave">	
 									<div class="form-group">
 										<input type="text" v-model="email" class="form-control" id="exampleInputEmail" placeholder="email" required="required">
@@ -49,6 +51,8 @@
 						</div>
 							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
 					</div>
+					<p class="korisnikEmail" v-if="store.authenticated">{{store.email}}</p>
+					<div v-if="store.authenticated"><button class="odjava" @click.prevent="logout()">Odjava</button></div>
 				</div>
 			</nav>
       </div>
@@ -72,6 +76,7 @@ export default {
     }; 
   },
   methods:{
+	
     async login(){
 
         console.log("pokusaj prijave")
@@ -84,10 +89,9 @@ export default {
             store.lozinka=this.lozinka;
             let success = await Auth.login(this.email, this.lozinka);
             console.log('Rezultat prijave', success);
-            if(success == true){
-                document.getElementById("exampleInputEmail").value = '';
-                document.getElementById("exampleInputLozinka").value = '';
+            if(success == true && store.authenticated){
                 console.log(this.email,this.lozinka)
+				console.log("evo me")
             }
             else{
                 console.log("Nije uspjelo")
@@ -141,8 +145,6 @@ color:black;
 margin-left: 78px;
 font-family: 'Varela Round', sans-serif;
 font-size:25px;
-
-
 }
 #poruka{
     color:red;

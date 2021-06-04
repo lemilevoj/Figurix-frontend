@@ -255,6 +255,18 @@ export default {
 
 
 <style>
+.korisnikEmail{
+    margin-top:15px;
+    margin:auto;
+	color:white;
+}
+.odjava{
+	border:none;
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+    background-color:transparent;
+    font-size:15px;
+}
 #porukaPassword{
   color:rgb(248, 235, 54);
 }
