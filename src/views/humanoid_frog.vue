@@ -2588,11 +2588,42 @@
 
     </div>
 	<div class="pozgumba">
-		<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
+		<!--<button type="button" class="btn btn-dark gumb" @click="takeScreenshot()">Pretvori u sliku</button>-->
+		<input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();'><br/>
+	</div>
+	<div>
+
 	</div>
     </div> 
 </template>
+<script>
+	import html2canvas from 'html2canvas'
+	export default{
 
+	
+	methods:{
+		screenshot(){
+			html2canvas(document.body,{background: '#fff'}).then(function(canvas) {
+
+				document.body.appendChild(canvas);
+
+				// Get base64URL
+				var base64URL = canvas.toDataURL('image/jpeg').replace('image/jpeg', 'image/octet-stream');
+
+				// AJAX request
+				$.ajax({
+						url: 'ajaxfile.php',
+						type: 'post',
+						data: {image: base64URL},
+						success: function(data){
+						console.log('Upload successfully');
+						}
+					});
+			});  
+		}
+		}
+	};
+</script>
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220);}
@@ -2605,6 +2636,9 @@
 	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 </style>
 <style>
+#but_screenshot{
+	margin-top:800px;
+}
 .korisnikEmail{
     margin-top:15px;
     margin:auto;

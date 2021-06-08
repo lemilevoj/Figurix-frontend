@@ -2,10 +2,7 @@
 <div>
   <div id="app">
     <!--<button @click="funkcija()"></button>-->
-	
-    <router-view />
-  </div>
-      <div class="navigacija">
+	<div class="navigacija">
 			<nav class="navbar navbar-expand-lg "> 
 				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
 				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -41,7 +38,7 @@
 									<div class="form-group">
 										<input type="password" v-model="lozinka" class="form-control" id="exampleInputLozinka" placeholder="lozinka" required="required">
 									</div>
-                                    <p id="poruka"></p>
+                                    <p id="poruka" v-if="store.ispunjeno">Polja su prazna</p>
 									<input type="submit" class="btn btn-primary btn-block" value="Prijava" @click.prevent="login()">
 									<div class="text-center mt-2">
 										<a style="color:black" href="#">Niste registrirani?</a>
@@ -56,6 +53,9 @@
 				</div>
 			</nav>
       </div>
+    <router-view />
+  </div>
+      
       
   </div>
  
@@ -81,7 +81,8 @@ export default {
 
         console.log("pokusaj prijave")
         if(this.email=='' || this.lozinka==''){
-         document.getElementById('poruka').innerHTML = "Polja su prazna!";
+         /*document.getElementById('poruka').innerHTML = "Polja su prazna!";*/
+		 store.ispunjeno=true;
         }
         else{
             store.authenticated = true;
