@@ -53,6 +53,9 @@
 	</select>
 	</div>
 	
+
+
+<div class="photo">
 <svg class="shape" version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
 <g id="svgg">
@@ -2585,44 +2588,34 @@
 		C150.6,332.9,150.2,333,150.7,333.1"/>
 </g>
 </svg>
+	</div>
+</div>
 
-    </div>
 	<div class="pozgumba">
 		<!--<button type="button" class="btn btn-dark gumb" @click="takeScreenshot()">Pretvori u sliku</button>-->
-		<input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot();'><br/>
-	</div>
-	<div>
-
+		<button type="button" class="gumbic">Take a Screenshot!</button>
 	</div>
     </div> 
+
 </template>
 <script>
-	import html2canvas from 'html2canvas'
+import html2canvas from 'html2canvas';
+import {canvas2image} from 'canvas2image';
+
+
 	export default{
+		methods: {
+			pretvoriUsliku() {
+			document.querySelector('.gumbic').addEventListener('click', function() {
+        html2canvas(document.querySelector('.photo'), {
+            onrendered: function(canvas) {
+              return canvas2image.saveAsPNG(canvas);
+		 }})
+        });
+	   },
+	}
+};
 
-	
-	methods:{
-		screenshot(){
-			html2canvas(document.body,{background: '#fff'}).then(function(canvas) {
-
-				document.body.appendChild(canvas);
-
-				// Get base64URL
-				var base64URL = canvas.toDataURL('image/jpeg').replace('image/jpeg', 'image/octet-stream');
-
-				// AJAX request
-				$.ajax({
-						url: 'ajaxfile.php',
-						type: 'post',
-						data: {image: base64URL},
-						success: function(data){
-						console.log('Upload successfully');
-						}
-					});
-			});  
-		}
-		}
-	};
 </script>
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
@@ -2848,6 +2841,7 @@
 	top: -15px;
 	z-index: 1;
 }
+
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
@@ -2875,5 +2869,77 @@
 		width: 100%;
 	}
 }
-</style>
 
+.gumbic {
+	margin-top: 800px;
+	position: absolute;
+}
+
+body {
+        margin: 0;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        background-color: #fff;
+  padding-left: 15px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    h1{
+        font-size: 36px;
+    }
+    
+    h1{
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    
+    h1 small{
+        font-size: 65%;
+    }
+    
+    h1 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777;
+        display: block;
+       padding-top: 15px;
+    }
+    .photo{
+    	background-color: #fff;
+    }
+
+p a{
+  padding: 5px;
+}
+</style>
