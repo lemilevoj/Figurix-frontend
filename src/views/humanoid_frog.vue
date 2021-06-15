@@ -2588,15 +2588,11 @@
 		C150.6,332.9,150.2,333,150.7,333.1"/>
 
 </svg>
-
-
-	</div>
+</div>
 </div>
 
 	<div class="pozgumba">	
-	
-<button id="button" @click.prevent="tipka()">Download</button>
-
+<button id="button" class="gumb" @click.prevent="tipka()">Preuzmi sliku</button>
 	</div>
     </div> 
 
@@ -2677,10 +2673,13 @@ export default {
 	padding:10px;
 	position:absolute;
 	margin-top:500px;
+	background-color:white;
 }
 .uredi{
 	display:flex;
 	position:absolute;
+	margin-top:60px;
+	margin-left: 50px;
 }
 
 .select{
@@ -2910,11 +2909,11 @@ body {
         background-color: #fff;
     }
     
-    .btn {
+    .gumb {
         display: inline-block;
         padding: 6px 12px;
-        margin-bottom: 0;
-        font-size: 14px;
+        margin-top: -13em;
+        font-size: 20px;
         font-weight: 400;
         line-height: 1.42857143;
         text-align: center;
@@ -2928,8 +2927,11 @@ body {
         -ms-user-select: none;
         user-select: none;
         background-image: none;
-        border: 1px solid transparent;
+        border: 0.5px solid;
         border-radius: 4px;
+		margin-left: 53px;
+
+
     }
     
     .btn-default {

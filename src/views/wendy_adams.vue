@@ -286,7 +286,7 @@
 		 M168.3,371.9c0.9,0.5,0.9,0.4,0.1,4c-2,8.8-2.5,13.2-1.4,13c0.6-0.1,0.8-0.4,0.9-1.3c0.2-1.9,2-12.8,2.4-14.1
 		c0.4-1.3,0.3-1.4-2.1-1.9C167.5,371.5,167.5,371.5,168.3,371.9 M162.6,388.9c0.4,0.1,1,0.1,1.4,0c0.4-0.1,0.1-0.2-0.7-0.2
 		S162.2,388.8,162.6,388.9"/>
-	<path id="wendy2" class="st1" d="M196.1,58.2c-0.1,0.7-0.5,1-1.3,1.2l-1.2,0.2l1.5,1.1c1.9,1.3,2.4,0.9,1.7-1.5
+	<path id="wendy2" class="st1" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M196.1,58.2c-0.1,0.7-0.5,1-1.3,1.2l-1.2,0.2l1.5,1.1c1.9,1.3,2.4,0.9,1.7-1.5
 		C196.3,57.6,196.2,57.4,196.1,58.2 M209.9,59.4c2,7.4,1.9,11.5-0.4,16c-1,2-1,2.1-0.3,2.6c0.8,0.6,1.6,0.4,1.4-0.3
 		c-0.1-0.3,0.1-0.4,0.3-0.2c0.2,0.1,0.4,0.1,0.4-0.2c0-0.2,0.2-0.3,0.3-0.2c0.4,0.2,1.1-0.5,1.2-1.1c0-0.2,0.3-0.3,0.6-0.3
 		c0.3,0.1,0.8-0.2,1-0.6c0.5-0.6,0.5-0.6-0.1-0.2c-0.5,0.4-0.7,0.4-0.7,0.1c0-0.3-0.1-0.4-0.3-0.3c-0.2,0.1-0.2-0.7-0.2-1.7
@@ -530,7 +530,7 @@
 		C124.8,349.7,122.9,349.4,122.5,350 M181.3,359.8c0.2,0.7,1.1,0.8,1.1,0.2c0-0.3-0.3-0.6-0.6-0.6
 		C181.5,359.4,181.3,359.6,181.3,359.8 M160,361.7c-0.3,0.4,1.4,1.2,2.5,1.2c1.3,0,1.2-0.7-0.1-1.1
 		C160.9,361.2,160.3,361.2,160,361.7"/>
-	<path id="wendy5" class="st4" d="M126.7,270.4c-0.6,0.8-1.7,3-1.7,3.5c0,0.4,0.1,0.3,0.4-0.1c0.3-0.5,0.4-0.5,0.6,0
+	<path id="wendy5" class="st4" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M126.7,270.4c-0.6,0.8-1.7,3-1.7,3.5c0,0.4,0.1,0.3,0.4-0.1c0.3-0.5,0.4-0.5,0.6,0
 		c0.2,0.5,1.7-2.7,1.7-3.6C127.7,269.8,127.1,269.9,126.7,270.4 M132.8,270.9c-0.4,0.5-0.4,0.5,0.2,0.3c1.8-0.7,2.1,1.6,0.5,3.1
 		l-0.8,0.7l0.9-0.4c1.8-0.9,2.1-3.1,0.5-3.9C133.5,270.4,133.2,270.5,132.8,270.9 M125.2,276.5c-0.4,0.1-0.9,0.3-1.2,0.5
 		c-0.6,0.6,0.6,0.4,1.7-0.2C126.8,276.2,126.6,276.1,125.2,276.5 M194.8,294.7c0.1,0.3,0,0.9-0.3,1.3c-0.5,0.6-0.5,0.6,0.2,0.1
@@ -725,7 +725,7 @@
 		C135.9,329.4,134.2,328.8,133.3,329.8 M159.9,371c-1.1,0.2-1.3,0.3-1.5,1.8c-0.1,0.9-0.6,3-1,4.6c-2.4,9.5-1.6,11.2,5.1,11.4
 		l3.7,0.1l0-1.6c0-0.9,0.2-2.3,0.3-3.1c0.6-3.1,0.7-3.5,0.8-3.9c0.1-0.2,0.2-1.3,0.4-2.3c0.2-1.1,0.4-2.2,0.6-2.5c1-2,0.8-3-0.7-3.6
 		C166.1,371.1,161.9,370.7,159.9,371"/>
-	<path id="wendy9" class="st8" d="M179.9,42.6c-0.7,1.1-0.5,1.5,0.7,1.5c3.5,0,2.8,9.2-1,13.4c-4.4,4.8-6.7,4.8-4.6,0
+	<path id="wendy9" class="st8" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M179.9,42.6c-0.7,1.1-0.5,1.5,0.7,1.5c3.5,0,2.8,9.2-1,13.4c-4.4,4.8-6.7,4.8-4.6,0
 		c0.9-2.2,1.1-6.8,0.3-6.1c-0.3,0.2-1.1,1.8-1.8,3.5c-1.3,3.2-5.7,9.2-6.5,9c-0.3-0.1-0.5-1.2-0.5-3c0-1.5-0.1-2.8-0.3-2.8
 		c-0.5,0-1.1,2.1-1,3.3c0.1,0.6,0,1.6-0.2,2.2c-0.3,1,0.5,4.5,2.1,9.1c0.2,0.6,0.5,1.7,0.7,2.3c0.2,0.6,0.9,2.2,1.5,3.5
 		c2.1,4,1.4,5.6-1.7,3.7c-0.8-0.5-1.4-0.7-1.4-0.5s-0.3,0-0.6-0.3c-0.6-0.5-0.6-0.5-0.5,0c0.5,1.5,4.3,3.6,6.1,3.4
@@ -1008,13 +1008,54 @@
 		c0-1.2-1.5-1.6-8.4-2.4l-1.6-0.2L166.2,371.1"/>
 </g>
 </svg>
-
 </div>
 <div class="pozgumba">
-	<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
+<button id="button" class="gumb" @click.prevent="tipka()">Preuzmi sliku</button>
 </div>
  </div> 
 </template>
+
+<script>
+import canvg from "canvg";
+function SVG2PNG(svg, callback) {
+	var canvas = document.createElement("canvas");
+	canvas.width = 400;
+	canvas.height = 400; // Create a Canvas element.
+	var ctx = canvas.getContext("2d"); // For Canvas returns 2D graphic.
+	var svgString = svg.outerHTML;
+	console.log(svgString);
+	var img = new Image();
+	img.addEventListener('load', () => {
+		ctx.drawImage(img, 0, 0, 400, 400);
+		callback(canvas.toDataURL("image/png")); // toDataURL return DataURI as Base64 format.
+	});
+	img.src = 'data:image/svg+xml,' + svgString;
+}
+
+
+function generateLink(fileName, data) {
+  var link = document.createElement("a");
+  link.download = fileName;
+  link.href = data;
+  return link;
+}
+
+
+export default {
+  methods: {
+    tipka() {
+		var svg = document.getElementById('svg');
+      	SVG2PNG(svg, function (png) {
+		// Arguments: SVG element, callback function.
+		generateLink("SVG2PNG-01.png", png).click(); // Trigger the Link is made by Link Generator and download.
+	});
+    },
+  },
+};
+
+
+</script>
+
 
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
@@ -1028,6 +1069,9 @@
 	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#535353;}
 </style>
 <style>
+#but_screenshot{
+	margin-top:800px;
+}
 .korisnikEmail{
     margin-top:15px;
     margin:auto;
@@ -1041,18 +1085,21 @@
     font-size:15px;
 }
 .pozgumba{
-	margin-left:15px;
+	margin-top:800px;
+	margin-left: 15px;
+	position:absolute
 }
 .gumb{
 	padding:10px;
 	position:absolute;
 	margin-top:500px;
+	background-color:white;
 }
-
 .uredi2{
 	display:flex;
 	position:absolute;
-
+	margin-top:60px;
+	margin-left: 50px;
 }
 
 .select{
@@ -1077,19 +1124,7 @@
 .shape{
     width:500px;
     height:500px;
-	margin-top:40px;
-}
-@media (max-width: 800px){
-	.shape{
-		margin-top:-20px;
-	}
-}
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-  border-color: white;
+	margin-top:30px;
 }
 .navbar {
 	background-color: black;
@@ -1146,6 +1181,13 @@
 .search-box i {
 	color: #a0a5b1;
 	font-size: 19px;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
 }
 .navbar .sign-up-btn {
 	min-width: 110px;
@@ -1244,6 +1286,7 @@
 	top: -15px;
 	z-index: 1;
 }
+
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
@@ -1271,5 +1314,79 @@
 		width: 100%;
 	}
 }
-</style>
 
+.gumbic {
+	margin-top: 800px;
+	position: absolute;
+}
+
+body {
+        margin: 0;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        background-color: #fff;
+    }
+    
+    .gumb {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-top: -18em;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 0.5px solid;
+        border-radius: 4px;
+		margin-left: 53px;
+
+
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    h1{
+        font-size: 36px;
+    }
+    
+    h1{
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    
+    h1 small{
+        font-size: 65%;
+    }
+    
+    h1 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777;
+        display: block;
+       padding-top: 15px;
+    }
+    .photo{
+    	background-color: #fff;
+    }
+
+p a{
+  padding: 5px;
+}
+</style>

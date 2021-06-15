@@ -1812,27 +1812,51 @@
 		c1.5,0.5,9.6,0.4,9.3,0c-0.1-0.2-2.5-0.4-5.3-0.3C212.9,380.5,211.4,380.6,212.1,380.8"/>
 </g>
 </svg>
-
-
-
     </div>
 	<div class="pozgumba">
-		<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
-	</div>
+	<button id="button" class="gumb" @click.prevent="tipka()">Preuzmi sliku</button>
     </div> 
+	</div>
 </template>
+<script>
+import canvg from "canvg";
+function SVG2PNG(svg, callback) {
+	var canvas = document.createElement("canvas");
+	canvas.width = 400;
+	canvas.height = 400; // Create a Canvas element.
+	var ctx = canvas.getContext("2d"); // For Canvas returns 2D graphic.
+	var svgString = svg.outerHTML;
+	console.log(svgString);
+	var img = new Image();
+	img.addEventListener('load', () => {
+		ctx.drawImage(img, 0, 0, 400, 400);
+		callback(canvas.toDataURL("image/png")); // toDataURL return DataURI as Base64 format.
+	});
+	img.src = 'data:image/svg+xml,' + svgString;
+}
+
+
+function generateLink(fileName, data) {
+  var link = document.createElement("a");
+  link.download = fileName;
+  link.href = data;
+  return link;
+}
+
+
+export default {
+  methods: {
+    tipka() {
+		var svg = document.getElementById('svg');
+      	SVG2PNG(svg, function (png) {
+		// Arguments: SVG element, callback function.
+		generateLink("SVG2PNG-01.png", png).click(); // Trigger the Link is made by Link Generator and download.
+	});
+    },
+  },
+};
+</script>
 	<style type="text/css">
-    /*
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220);}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#383838;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-    */
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
@@ -1844,6 +1868,9 @@
 	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#969696;}
 </style>
 <style>
+#but_screenshot{
+	margin-top:800px;
+}
 .korisnikEmail{
     margin-top:15px;
     margin:auto;
@@ -1857,19 +1884,21 @@
     font-size:15px;
 }
 .pozgumba{
-	margin-left:15px;
+	margin-top:800px;
+	margin-left: 15px;
+	position:absolute
 }
 .gumb{
 	padding:10px;
 	position:absolute;
-	margin-top:600px;
-}
-.tekst_figure{
-    margin-left: 35px;
+	margin-top:500px;
+	background-color:white;
 }
 .uredi{
 	display:flex;
 	position:absolute;
+	margin-top:60px;
+	margin-left: 50px;
 }
 
 .select{
@@ -1894,19 +1923,7 @@
 .shape{
     width:500px;
     height:500px;
-	margin-top:80px;
-}
-@media (max-width: 800px){
-	.shape{
-		margin-top:0px;
-	}
-}
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-  border-color: white;
+	margin-top:30px;
 }
 .navbar {
 	background-color: black;
@@ -1963,6 +1980,13 @@
 .search-box i {
 	color: #a0a5b1;
 	font-size: 19px;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
 }
 .navbar .sign-up-btn {
 	min-width: 110px;
@@ -2061,6 +2085,7 @@
 	top: -15px;
 	z-index: 1;
 }
+
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
@@ -2088,5 +2113,79 @@
 		width: 100%;
 	}
 }
-</style>
 
+.gumbic {
+	margin-top: 800px;
+	position: absolute;
+}
+
+body {
+        margin: 0;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        background-color: #fff;
+    }
+    
+    .gumb {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-top: -13em;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 0.5px solid;
+        border-radius: 4px;
+		margin-left: 53px;
+
+
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    h1{
+        font-size: 36px;
+    }
+    
+    h1{
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    
+    h1 small{
+        font-size: 65%;
+    }
+    
+    h1 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777;
+        display: block;
+       padding-top: 15px;
+    }
+    .photo{
+    	background-color: #fff;
+    }
+
+p a{
+  padding: 5px;
+}
+</style>

@@ -17,44 +17,12 @@
 		<option value="detalji_wizard2">Svijetlo smeđa</option>
 		<option value="detalji_wizard3">Tamno plava</option>
 	</select>
-    <!--
-	<select class="select" name="oko" id="oko" onclick="obojiOko();">
-		<option>Oči</option>
-		<option value="o1">Žuta</option>
-		<option value="o2">Zelena</option>
-		<option value="o3">Crvena</option>
-	</select>
-	<select class="select" name="skrge" id="skrge" onclick="obojiSkrge();">
-		<option>Škrge</option>
-		<option value="s1">Crvena</option>
-		<option value="s2">Žuta</option>
-		<option value="s3">Zelena</option>
-	</select>
-	<select class="select" name="detalji" id="detalji" onclick="obojiDetalje();">
-		<option>Detalji</option>
-		<option value="d1">Svijetlo smeđa</option>
-		<option value="d2">Tamno smeđa</option>
-		<option value="d3">Zelena</option>
-	</select>
-	<select class="select" name="oruzje" id="oruzje" onclick="obojiOruzje();">
-		<option>Oružje</option>
-		<option value="oruzje1">Tamno plava</option>
-		<option value="oruzje2">Svijetlo plava</option>
-		<option value="oruzje3">Tamno crvena</option>
-		<option value="oruzje4">Ljubičasta</option>
-	</select>
-	<select class="select" name="odjeca" id="odjeca" onclick="obojiOdjecu();">
-		<option>Odjeća</option>
-		<option value="odjeca1">Krem</option>
-		<option value="odjeca2">Svijetlo plava</option>
-		<option value="odjeca3">Tamno crvena</option>
-	</select>-->
 	</div>
 	
 <svg version="1.1" id="svg" class="shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
 <g id="svgg">
-	<path id="wizard0" class="st0" d="M161.4,75.1c0.2,0.3-0.1,0.5-0.9,0.5c-0.8,0-1.3,0.3-1.6,1c-0.3,0.6-0.8,1-1.3,1
+	<path id="wizard0" class="st0" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M161.4,75.1c0.2,0.3-0.1,0.5-0.9,0.5c-0.8,0-1.3,0.3-1.6,1c-0.3,0.6-0.8,1-1.3,1
 		c-0.7,0-0.8,0.1-0.4,0.8c0.3,0.6,0.3,0.9-0.1,1.3c-0.8,0.8,1.2,4.2,2.5,4.3c0.3,0,1.2-2,1.2-2.6c0-0.3,0.2-0.5,0.4-0.6
 		c0.2-0.1,0.5-0.8,0.6-1.5c0.1-0.8,0.4-1.6,0.7-1.9c0.4-0.4,0.3-0.6-0.2-0.9c-0.4-0.2-0.6-0.5-0.5-0.7c0.1-0.2,0-0.5-0.3-0.6
 		C161.3,74.8,161.2,74.8,161.4,75.1 M139.8,79.4c-0.8,0.8-0.8,1.8-0.1,1.8c0.3,0,0.8,0.3,1,0.6c0.5,0.6,5.2,0.9,5.2,0.3
@@ -253,7 +221,7 @@
 		S176.5,349.4,176.6,349.6 M173.4,350.6c-0.4,1.2-0.3,1.3,1.6,1.2c2-0.1,2-0.1,1.3-0.8C175.4,350.2,173.7,349.9,173.4,350.6
 		 M178.4,351.4c0,0.3,0.2,0.6,0.4,0.6s0.4-0.3,0.4-0.6c0-0.3-0.2-0.6-0.4-0.6S178.4,351.1,178.4,351.4 M218.7,352.5
 		c0.4,0.4,0.6,0.4,1,0c0.4-0.4,0.3-0.5-0.5-0.5C218.5,352,218.3,352.1,218.7,352.5"/>
-	<path id="wizard1" class="st1" d="M308.8,18.8c0,0.2,0.4,0.4,0.8,0.4s0.7-0.2,0.6-0.4c-0.1-0.2-0.5-0.4-0.8-0.4
+	<path id="wizard1" class="st1" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M308.8,18.8c0,0.2,0.4,0.4,0.8,0.4s0.7-0.2,0.6-0.4c-0.1-0.2-0.5-0.4-0.8-0.4
 		C309.1,18.4,308.8,18.6,308.8,18.8 M318.3,19.1c-0.5,0.6-0.5,0.6,0.2,0.4c0.4-0.2,0.9-0.3,1.1-0.3s0.4-0.2,0.4-0.4
 		C320,18.2,318.9,18.3,318.3,19.1 M312.6,29.1c-0.5,0.5-0.2,0.8,0.9,1c1.3,0.3,3.8-0.3,2.9-0.6C315.3,29.1,312.9,28.9,312.6,29.1
 		 M316.7,36.2c-0.1,0.3-0.6,0.6-1,0.6c-0.4,0-0.8,0.2-0.8,0.4c0,0.6,0.9,0.5,1.6-0.1c0.4-0.4,0.5-0.4,0.3,0.2
@@ -739,7 +707,7 @@
 		C167.1,300.6,167.3,300.5,168.9,301.6 M198.3,302.6c0.3,0.8-0.9,1.2-1.7,0.6c-0.5-0.4-0.6-0.4-0.4,0.1c0.3,0.8,1.4,1,2.4,0.5
 		c0.7-0.3,0.8-0.6,0.5-1.1C198.7,301.8,197.9,301.8,198.3,302.6 M163.8,310.4c0,0.3-0.3,0.6-0.7,0.7c-0.5,0.1-0.7-0.1-0.7-0.7
 		c0-0.6,0.2-0.8,0.7-0.7C163.5,309.8,163.8,310.1,163.8,310.4"/>
-	<path id="wizard3" class="st3" d="M311.6,16.7c0,0.8,0.8,1.3,2.3,1.5c2.4,0.4,2.1-0.7-0.4-1.2c-0.1,0-0.4-0.2-0.6-0.4
+	<path id="wizard3" class="st3" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M311.6,16.7c0,0.8,0.8,1.3,2.3,1.5c2.4,0.4,2.1-0.7-0.4-1.2c-0.1,0-0.4-0.2-0.6-0.4
 		c-0.2-0.2-0.5-0.3-0.8-0.3C311.8,16.4,311.6,16.5,311.6,16.7 M293.6,109.2c-0.3,0.4-1.1,0.8-1.8,0.9c-2.2,0.3-2.6,0.7-2.6,2.3
 		c0,1.9,0.7,3.7,1.2,3.4c0.2-0.1,0.8,0,1.2,0.4c0.5,0.4,1,0.6,1.3,0.4c0.3-0.2,0.9-0.3,1.4-0.2c0.5,0.1,1-0.1,1.1-0.3
 		c0.3-0.5,3.5-0.6,4-0.1c0.2,0.2,0.8,0.3,1.4,0.3c0.6,0,1.1,0.1,1.1,0.3c0,0.2,0.4,0.8,0.7,1.3c0.4,0.6,0.6,1.3,0.4,1.6
@@ -862,7 +830,7 @@
 		c0.9-0.8,1.9-0.6,2.4,0.6c0.2,0.6,0.4,0.7,0.6,0.4c0.3-0.4-0.8-2.5-1.3-2.5c-0.8,0-3.2,1.1-3.7,1.8c-0.9,1.1-1.4,0.5-0.9-1
 		C258.5,344.7,256.4,344,255.2,345.4 M261.4,350.3c-0.9,0.2-1.2-0.1-0.8-0.7c0.2-0.3,0.5-0.3,0.9,0.1
 		C262.1,350.1,262.1,350.2,261.4,350.3"/>
-	<path id="wizard4" class="st4" d="M314.6,4.2c-0.5,1.2,0.2,2.2,0.9,1.2c0.3-0.4,0.5-1,0.4-1.2C315.7,3.6,314.8,3.5,314.6,4.2
+	<path id="wizard4" class="st4" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M314.6,4.2c-0.5,1.2,0.2,2.2,0.9,1.2c0.3-0.4,0.5-1,0.4-1.2C315.7,3.6,314.8,3.5,314.6,4.2
 		 M310.4,9.9c0,0.3-0.1,0.7-0.1,0.9c0,0.2-0.2,0.5-0.5,0.7c-0.7,0.5-1,1.7-0.4,1.7c0.6,0,1.6-2.5,1.3-3.3
 		C310.5,9.5,310.4,9.5,310.4,9.9 M321.2,11.8c0,0.3,0.1,0.6,0.3,0.6c0.2,0,0.5,0.5,0.8,1.2c0.3,0.7,0.7,1.2,0.9,1.2
 		c0.4,0-0.7-2.2-1.6-3.1C321.3,11.2,321.2,11.2,321.2,11.8 M307.8,14.4c-0.1,0.2-0.1,0.4,0,0.4c0.2,0,0,0.4-0.4,0.8
@@ -1491,7 +1459,7 @@
 		C169.1,349.4,167.4,349.4,167,350.2 M253.3,349.9c0.6,0.1,1.5,0.1,2,0c0.5-0.1,0-0.2-1.1-0.2C253.1,349.7,252.7,349.8,253.3,349.9
 		 M202,350.2c0,0.6,0.9,1.8,1.4,1.8c0.9,0,1.7-1.2,1-1.6C203.7,350,202,349.9,202,350.2 M207,356c-0.2,0.3,0,0.6,0.3,0.8
 		c0.8,0.5,1.2,0.4,1.1-0.3C208.2,355.7,207.4,355.4,207,356"/>
-	<path id="wizard5" class="st5" d="M139.2,73.3c0,1.6,1.3,2.2,2.5,1.2c0.7-0.6,0.7-0.6,0.7,0.4c0,0.6-0.2,1.1-0.4,1.1
+	<path id="wizard5" class="st5" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M139.2,73.3c0,1.6,1.3,2.2,2.5,1.2c0.7-0.6,0.7-0.6,0.7,0.4c0,0.6-0.2,1.1-0.4,1.1
 		c-0.2,0-0.5,0.4-0.6,0.9c-0.1,0.5-0.9,1.3-1.8,1.8c-2.9,1.7-0.7,4.1,3.9,4.4c2.9,0.2,4.6,0.7,6,1.8c0.5,0.4,1.1,0.7,1.3,0.7
 		c0.7,0,0.3-1.5-0.4-1.8c-2-0.6-4.7-3.7-4.2-4.8c0.6-1.3,0.6-1.3-0.3-1.5c-0.4-0.1-0.8-0.5-0.8-0.8c0-0.7,1-0.9,1.4-0.2
 		c0.2,0.3,0.5,0.2,1-0.3c1.5-1.3,3.7,0.7,2.3,2.1c-0.5,0.5-0.1,1.3,0.7,1.3c0.6,0,0.7-0.5,0.6-1.6c0-0.3,0.1-1,0.4-1.5
@@ -2667,7 +2635,7 @@
 		C212.3,372.8,212.3,373,212,373.3 M184.8,375.4c0,0.6,1.2,1.2,1.5,0.9c0.1-0.1,0-0.2-0.3-0.2c-0.3,0-0.5-0.3-0.5-0.6
 		c0-0.3-0.2-0.6-0.4-0.6S184.8,375.1,184.8,375.4 M214.4,376.4c0,0.5,1.1,0.5,2.2,0c0.6-0.3,0.5-0.3-0.7-0.4
 		C215.1,376,214.4,376.2,214.4,376.4"/>
-	<path id="wizard7" class="st7" d="M313.1,4c-1.1,0.6-2.3,3.5-2.3,5.5c0,1-0.2,1.6-0.4,1.5c-0.2-0.1-0.5,0-0.7,0.2
+	<path id="wizard7" class="st7" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M313.1,4c-1.1,0.6-2.3,3.5-2.3,5.5c0,1-0.2,1.6-0.4,1.5c-0.2-0.1-0.5,0-0.7,0.2
 		c-0.2,0.3-0.1,0.4,0.2,0.2c0.5-0.3,0.6,0.1,0.2,1.1c-0.1,0.3-0.5,0.6-0.8,0.6c-0.4,0-0.5-0.2-0.3-0.5c0.2-0.3-0.1-0.2-0.6,0.3
 		s-0.9,0.9-0.9,1.2c0,0.2,0.1,0.3,0.2,0.2c0.1-0.1,0.6,0.1,1,0.6c0.4,0.4,1.1,0.7,1.4,0.6c0.3-0.1,1.6,0.1,2.9,0.5
 		c1.4,0.4,2.5,0.6,2.7,0.4c0.4-0.4,1.7,0,1.7,0.5c0,2.1-4,2.2-8.1,0.1c-1.5-0.7-2.4-0.7-3.1,0c-0.3,0.3-0.4,0.6-0.2,0.6
@@ -3589,7 +3557,7 @@
 		c1-0.4,0.8-1.4-0.4-1.4C234.7,366.8,234.4,367,234.4,367.6 M215.2,367.8c0,0.3-0.2,0.6-0.4,0.6s-0.4-0.3-0.4-0.6
 		c0-0.3,0.2-0.6,0.4-0.6S215.2,367.5,215.2,367.8 M211.4,372.8c-0.4,0.6,0.1,1,0.7,0.5c0.3-0.3,0.3-0.5,0-0.7
 		C211.8,372.5,211.5,372.6,211.4,372.8"/>
-	<path id="wizard8" class="st8" d="M315.8,7.6c-0.1,0.2,0.1,0.4,0.6,0.4s0.8-0.2,0.8-0.4c0-0.2-0.3-0.4-0.6-0.4
+	<path id="wizard8" class="st8" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M315.8,7.6c-0.1,0.2,0.1,0.4,0.6,0.4s0.8-0.2,0.8-0.4c0-0.2-0.3-0.4-0.6-0.4
 		C316.3,7.2,315.9,7.4,315.8,7.6 M318.2,11.1c-0.3,0.9-0.1,1.1,0.5,0.4c0.3-0.3,0.3-0.7,0.1-0.8C318.7,10.5,318.4,10.7,318.2,11.1
 		 M308,18.8c0,0.7,2.8,2.4,3.9,2.4c0.8,0,0.5-1.5-0.4-2.2c-1-0.7-1.7-0.8-1.3-0.2c0.1,0.2-0.1,0.4-0.6,0.4c-0.9,0-1.1-0.6-0.3-0.9
 		c0.3-0.1,0.1-0.2-0.4-0.2C308.3,18,308,18.2,308,18.8 M317.3,18.7c-1.4,0.7-1.5,0.9-1.1,1.9c0.4,1.1,6.2-0.8,6.2-2.1
@@ -4102,26 +4070,52 @@
 		C227.7,394.1,227.2,394.2,227.7,394.4"/>
 </g>
 </svg>
-
-
     </div>
 	<div class="pozgumba">
-		<button type="button" class="btn btn-dark gumb">Pretvori u sliku</button>
+	<button id="button" class="gumb" @click.prevent="tipka()">Preuzmi sliku</button>
 	</div>
     </div> 
 </template>
+<script>
+import canvg from "canvg";
+function SVG2PNG(svg, callback) {
+	var canvas = document.createElement("canvas");
+	canvas.width = 400;
+	canvas.height = 400; // Create a Canvas element.
+	var ctx = canvas.getContext("2d"); // For Canvas returns 2D graphic.
+	var svgString = svg.outerHTML;
+	console.log(svgString);
+	var img = new Image();
+	img.addEventListener('load', () => {
+		ctx.drawImage(img, 0, 0, 400, 400);
+		callback(canvas.toDataURL("image/png")); // toDataURL return DataURI as Base64 format.
+	});
+	img.src = 'data:image/svg+xml,' + svgString;
+}
 
-<style type="text/css">/*
-	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220);}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#383838;}
-	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-	.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
-*/
+
+function generateLink(fileName, data) {
+  var link = document.createElement("a");
+  link.download = fileName;
+  link.href = data;
+  return link;
+}
+
+
+export default {
+  methods: {
+    tipka() {
+		var svg = document.getElementById('svg');
+      	SVG2PNG(svg, function (png) {
+		// Arguments: SVG element, callback function.
+		generateLink("SVG2PNG-01.png", png).click(); // Trigger the Link is made by Link Generator and download.
+	});
+    },
+  },
+};
+
+</script>
+<style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#E0E0D6;}
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#1F2B30;}
 	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#B5B7BB;}
@@ -4134,6 +4128,9 @@
 
 </style>
 <style>
+#but_screenshot{
+	margin-top:800px;
+}
 .korisnikEmail{
     margin-top:15px;
     margin:auto;
@@ -4147,17 +4144,21 @@
     font-size:15px;
 }
 .pozgumba{
-	margin-left:15px;
+	margin-top:800px;
+	margin-left: 15px;
+	position:absolute
 }
 .gumb{
 	padding:10px;
 	position:absolute;
-	margin-top:600px;
+	margin-top:500px;
+	background-color:white;
 }
-
 .uredi{
 	display:flex;
 	position:absolute;
+	margin-top:60px;
+	margin-left: 50px;
 }
 
 .select{
@@ -4182,19 +4183,7 @@
 .shape{
     width:500px;
     height:500px;
-	margin-top:70px;
-}
-@media (max-width: 800px){
-	.shape{
-		margin-top:0px;
-	}
-}
-.custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.custom-toggler.navbar-toggler {
-  border-color: white;
+	margin-top:30px;
 }
 .navbar {
 	background-color: black;
@@ -4251,6 +4240,13 @@
 .search-box i {
 	color: #a0a5b1;
 	font-size: 19px;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
 }
 .navbar .sign-up-btn {
 	min-width: 110px;
@@ -4349,6 +4345,7 @@
 	top: -15px;
 	z-index: 1;
 }
+
 .navbar .action-buttons .dropdown-toggle::after {
 	display: none;
 }
@@ -4376,5 +4373,79 @@
 		width: 100%;
 	}
 }
-</style>
 
+.gumbic {
+	margin-top: 800px;
+	position: absolute;
+}
+
+body {
+        margin: 0;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        background-color: #fff;
+    }
+    
+    .gumb {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-top: -15em;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 0.5px solid;
+        border-radius: 4px;
+		margin-left: 53px;
+
+
+    }
+    
+    .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    
+    h1{
+        font-size: 36px;
+    }
+    
+    h1{
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.1;
+        color: inherit;
+    }
+    
+    h1 small{
+        font-size: 65%;
+    }
+    
+    h1 small {
+        font-weight: 400;
+        line-height: 1;
+        color: #777;
+        display: block;
+       padding-top: 15px;
+    }
+    .photo{
+    	background-color: #fff;
+    }
+
+p a{
+  padding: 5px;
+}
+</style>
