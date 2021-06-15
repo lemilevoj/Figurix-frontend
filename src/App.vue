@@ -38,7 +38,7 @@
 									<div class="form-group">
 										<input type="password" v-model="lozinka" class="form-control" id="exampleInputLozinka" placeholder="lozinka" required="required">
 									</div>
-                                    <p id="poruka" v-if="store.ispunjeno">Polja su prazna</p>
+                                    <p id="poruka" v-if="store.prazno">Polja su prazna!</p>
 									<input type="submit" class="btn btn-primary btn-block" value="Prijava" @click.prevent="login()">
 									<div class="text-center mt-2">
 										<a style="color:black" href="#">Niste registrirani?</a>
@@ -78,25 +78,28 @@ export default {
   methods:{
 	
     async login(){
-
+		
         console.log("pokusaj prijave")
-        if(this.email=='' || this.lozinka==''){
-         /*document.getElementById('poruka').innerHTML = "Polja su prazna!";*/
-		 store.ispunjeno=true;
-        }
-        else{
+		let success=false;
+		
+		if(success==false && (this.email=='' || this.lozinka=='')){
+			
+		 	store.prazno=true;
+        	
+		}
+		success = await Auth.login(this.email, this.lozinka);
+		
+        if(success == true){
             store.authenticated = true;
             store.email=this.email;
-            store.lozinka=this.lozinka;
-            let success = await Auth.login(this.email, this.lozinka);
+            
+            
             console.log('Rezultat prijave', success);
-            if(success == true && store.authenticated){
+            
+				console.log(success);
                 console.log(this.email,this.lozinka)
+				
 				console.log("evo me")
-            }
-            else{
-                console.log("Nije uspjelo")
-            }
         }
         console.log(store.authenticated)
       },
@@ -105,12 +108,6 @@ export default {
       Auth.logout();
       this.$router.go(); //za osvjezavanje
     },
-    funkcija(){
-      console.log(store.authenticated)
-      console.log(store.email)
-      console.log(store.lozinka)
-    },
-    
   }
 };
 

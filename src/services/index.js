@@ -32,23 +32,37 @@ Service.interceptors.response.use(
 );
 
 
-
+let Objave = {
+    dodaj_objavu(galerija) {
+        console.log("evo mene opet")
+        return Service.post('/galerija', galerija);
+    },
+    async dohvati_objavu() {   
+        console.log("dohvacanje id-a")     
+        let response = await Service.get(`/galerija`)
+        let doc = response.data
+        console.log("dohvacanje doc-a")  
+        console.log(doc)
+            return {
+                id: doc._id,
+                email: doc.email,
+                naslov: doc.naslov,
+                noviOpisSlike: doc.noviOpisSlike,
+                slika: doc.slikaReference,
+            };
+    }
+}
 
 let Auth = {
-
- 
-    dohvatBackend() {
-        return Service.get ("/galerija")
-    },
     async signup(korisnickoIme,email,lozinka,lozinka2) {
         let post=await Service.post('/registracija', korisnickoIme,email,lozinka,lozinka2);
         return post
-
     },
     async login(email, lozinka){
+        
         let response = await Service.post("/auth",{
            email: email,
-           lozinka: lozinka,
+           lozinka: lozinka
         });
         let user = response.data
         localStorage.setItem("user", JSON.stringify(user)); 
@@ -79,6 +93,7 @@ let Auth = {
             return false
         }
     },
+    
     profil(){
         let user = Auth.getUser()
         if(user){
@@ -92,4 +107,4 @@ let Auth = {
     }
 };
 
-export { Service, Auth } // exportamo Service za ručne pozive ili Posts za metode.
+export { Service, Auth, Objave } // exportamo Service za ručne pozive ili Posts za metode.

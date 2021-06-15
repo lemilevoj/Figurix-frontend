@@ -1,6 +1,6 @@
 export default {
     authenticated: false,
-    email: 'neki@gmail.com',
+    email: '',
     korisnickoIme: 'Neki user',
-    ispunjeno: false,
+    prazno: false,
 }
