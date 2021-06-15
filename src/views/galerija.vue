@@ -1,13 +1,59 @@
 <template>
     <div>
-    
-
-        <section id="header" class="pozadina text-center">
+    <section id="header" class="pozadina text-center">
      <h1 class="display-3">GALERIJA</h1>
      <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
      
 </section>
+
+<div class="objavabtn">
+    <input type="text" class="objava" placeholder="Dodaj objavu..." id="galerija"  data-toggle="modal" data-target="#ModalLoginForm" >
+    <button type="button" class="btn1 btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm" > Objavi</button>
+</div>
+
+
+<div id="ModalLoginForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Galerija</h1>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="novaoObjava()" action="">
+                    <input type="hidden" name="_token" value="">
+                  
+                    <div class="form-group">
+                        <label for="galerija" class="control-label">Dodaj objavu</label>
+                        <br>
+                        
+                    </div>
+					<div class="form-group">
+						<span class="fw-500">Naslov</span>
+                            <input v-model="naslov" type="text" class="form-control input-lg" name="naslovSlike" id="naslovSlike" value="">
+                    </div>
+					<div class="form-group">
+						<span class="fw-500">Opis slike</span>
+                            <input v-model="noviOpisSlike" type="text" class="form-control input-lg" name="opisSlike" id="opisSlike" value="">
+                    </div>
+                    <div class="dodavanje-slike">
+                        <input type="file" id="dodajsliku" name="fileid" multiple>
+                        <!--<croppa :width="400" :height="400" placeholder="Učitaj sliku" v-model="slikaReference"></croppa>-->
+						 
+                    </div>
+                        
+                    
+                    <div>
+                        <button type="submit" class="btn" @click.prevent="dodajObjavu();dohvatiObjavu();">Objavi</button>
+						
+                    </div>
+					
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
   
+
 <section id="gallery">
   <div class="container">
     <div class="row">
@@ -16,7 +62,7 @@
       <img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">
       <div class="card-body">
 	<div class="posts">
- <h5 class="card-title">SPOILS OF WAR</h5>
+ <h5 class="card-title" v-for="objava in objava" :key="objava.id" :info="objava">{{objava.naslov}}</h5>
  <p class="card-text">Igra za 3 do 5 igrača koji poput vikinga trebaju podijeliti blago. Igra ze bazira na principu "Liars dice" gdje se igrači klade na broj kockica s određenim brojem u odnosu na ukupan broj kockica u igri. Svaki igrač ima svoj zaslon i plastičnu posudicu za bacanje i skrivanje kockica. Uz igru dolazi tematski dizajnirani drveni insert što ulazi u cijenu. </p>
   <a href="#" class="style-3">Read More</a>
 </div>
@@ -52,8 +98,51 @@
 </div>
 </section>
         </div>
+ 
+</template> 
 
-</template>
+<script> 
+import store from '@/store.js';
+import {Objave} from '@/services';
+export default{
+	
+	props:['id'],
+
+	data() {
+        return {
+            noviOpisSlike:"",
+			naslov:"",
+			slikaReference: null,
+			user: {},
+			email:"",
+			objava: [],
+			store
+        };
+    },
+	methods: {
+	 dodajObjavu(){
+        let galerija = {
+			email: store.email,
+			naslov: this.naslov,
+			noviOpisSlike: this.noviOpisSlike,
+			slika: this.slikaReference,
+        }
+		let novaObjava =  Objave.dodaj_objavu(galerija);
+		console.log(galerija);
+		console.log("evo me hehe")
+	},
+	async dohvatiObjavu() {
+			console.log("TU SAM")
+            this.objava = await Objave.dohvati_objavu(this.props);
+            console.log("Evo povratnih objava " + this.objava.naslov)
+			console.log("HEHEHEHE")
+        },
+	}
+};
+</script>
+
+
+
 
 <style>
 .korisnikEmail{

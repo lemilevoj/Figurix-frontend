@@ -55,10 +55,10 @@
 	
 
 
-<div class="photo">
+<div class="photo" id="photo">
 <svg class="shape" version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
-<g id="svgg">
+	width="400" height="400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
+
 	
 	<path id="path0" class="st0" d="M205.7,284.7c-0.1,0.1-3.4,0.2-7.3,0.3c-3.9,0.1-7.9,0.2-8.9,0.4c-1,0.1-2.3,0.3-2.9,0.4
 		c-0.6,0.1-2.2,0.3-3.5,0.5c-3.4,0.6-8.8,1.2-10.3,1.2c-1.5,0-1.5,0.2-0.5,2.6c1,2.1,1,7.1,0,7.6c-0.3,0.2-1.5,0.8-2.6,1.5
@@ -76,7 +76,7 @@
 		c-0.2-0.1-1.3-0.3-2.5-0.6c-1.1-0.3-2.5-0.5-3-0.5c-0.5,0-1.6-0.6-2.5-1.4c-1.3-1.1-2.1-1.5-3.9-1.7c-1.9-0.2-2.3-0.4-3-1.5
 		c-0.9-1.4-1.9-2.1-3.3-2.3c-0.6-0.1-1.6-0.3-2.4-0.5c-2.5-0.7-6.5-1.2-9-1.2c-3.6,0-6.5-0.9-7.7-2.3c-0.7-0.9-1.3-1.2-2.3-1.2
 		c-0.7,0-2.3-0.5-3.5-1C222.7,284.7,206.5,283.9,205.7,284.7"/>
-	<path id="path1" class="st1" d="M239.4,40.8c-0.7,0.7-1.3,2.1-0.9,2.5c0.1,0.1,0.2,0,0.2-0.4c0-0.4,0.2-0.5,0.7-0.4
+	<path id="path1" class="st1" style="fill-rule:evenodd;clip-rule:evenodd;fill:rgb(220, 220, 220)" d="M239.4,40.8c-0.7,0.7-1.3,2.1-0.9,2.5c0.1,0.1,0.2,0,0.2-0.4c0-0.4,0.2-0.5,0.7-0.4
 		c0.9,0.2,1.3-0.3,0.9-1.4C240,40.2,239.9,40.2,239.4,40.8 M250,56.4c0,0.1,0.6,0.6,1.3,1.3l1.3,1.1l-1.1-1.3
 		C250.3,56.3,250,56.1,250,56.4 M257.4,67.3c0,0.4,1.2,2.6,1.4,2.6c0.1,0-0.1-0.6-0.4-1.3C257.6,67.2,257.4,66.9,257.4,67.3
 		 M222.9,70.7c1.7,1.7,3.2,3.1,3.3,3.1c0.1,0-1.2-1.4-2.9-3.1c-1.7-1.7-3.2-3.1-3.3-3.1C219.8,67.6,221.1,69,222.9,70.7 M253.9,71.3
@@ -2586,35 +2586,59 @@
 		c0.3-0.2,0.9-0.5,1.4-0.6c0.7-0.2,0.7-0.2-0.1-0.2C162.2,302,161.6,302.3,161.3,302.6 M139.7,332.3c0.5,0.1,1.3,0.1,1.8,0
 		c0.5-0.1,0.1-0.2-0.9-0.2S139.3,332.2,139.7,332.3 M150.7,333.1c0.5,0.1,1.3,0.1,1.8,0c0.5-0.1,0.1-0.2-0.9-0.2
 		C150.6,332.9,150.2,333,150.7,333.1"/>
-</g>
+
 </svg>
+
+
 	</div>
 </div>
 
-	<div class="pozgumba">
-		<!--<button type="button" class="btn btn-dark gumb" @click="takeScreenshot()">Pretvori u sliku</button>-->
-		<button type="button" class="gumbic">Take a Screenshot!</button>
+	<div class="pozgumba">	
+	
+<button id="button" @click.prevent="tipka()">Download</button>
+
 	</div>
     </div> 
 
 </template>
 <script>
-import html2canvas from 'html2canvas';
-import {canvas2image} from 'canvas2image';
+import canvg from "canvg";
+function SVG2PNG(svg, callback) {
+	var canvas = document.createElement("canvas");
+	canvas.width = 400;
+	canvas.height = 400; // Create a Canvas element.
+	var ctx = canvas.getContext("2d"); // For Canvas returns 2D graphic.
+	var svgString = svg.outerHTML;
+	console.log(svgString);
+	var img = new Image();
+	img.addEventListener('load', () => {
+		ctx.drawImage(img, 0, 0, 400, 400);
+		callback(canvas.toDataURL("image/png")); // toDataURL return DataURI as Base64 format.
+	});
+	img.src = 'data:image/svg+xml,' + svgString;
+}
 
 
-	export default{
-		methods: {
-			pretvoriUsliku() {
-			document.querySelector('.gumbic').addEventListener('click', function() {
-        html2canvas(document.querySelector('.photo'), {
-            onrendered: function(canvas) {
-              return canvas2image.saveAsPNG(canvas);
-		 }})
-        });
-	   },
-	}
+function generateLink(fileName, data) {
+  var link = document.createElement("a");
+  link.download = fileName;
+  link.href = data;
+  return link;
+}
+
+
+export default {
+  methods: {
+    tipka() {
+		var svg = document.getElementById('svg');
+      	SVG2PNG(svg, function (png) {
+		// Arguments: SVG element, callback function.
+		generateLink("SVG2PNG-01.png", png).click(); // Trigger the Link is made by Link Generator and download.
+	});
+    },
+  },
 };
+
 
 </script>
 <style type="text/css">
@@ -2645,7 +2669,9 @@ import {canvas2image} from 'canvas2image';
     font-size:15px;
 }
 .pozgumba{
-	margin-left:15px;
+	margin-top:800px;
+	margin-left: 15px;
+	position:absolute
 }
 .gumb{
 	padding:10px;
@@ -2882,7 +2908,6 @@ body {
         line-height: 20px;
         color: #333;
         background-color: #fff;
-  padding-left: 15px;
     }
     
     .btn {
