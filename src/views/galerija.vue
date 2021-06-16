@@ -8,7 +8,7 @@
 
 <div class="objavabtn">
     <input type="text" class="objava" placeholder="Dodaj objavu..." id="galerija"  data-toggle="modal" data-target="#ModalLoginForm" >
-    <button type="button" class="btn1 btn-primary btn-lg" data-toggle="modal" data-target="#ModalLoginForm" > Objavi</button>
+    <button type="button" class="objaviGumb btn-lg" data-toggle="modal" data-target="#ModalLoginForm" > Objavi</button>
 </div>
 
 
@@ -36,14 +36,13 @@
                             <input v-model="noviOpisSlike" type="text" class="form-control input-lg" name="opisSlike" id="opisSlike" value="">
                     </div>
                     <div class="dodavanje-slike">
-                        <input type="file" id="dodajsliku" name="fileid" multiple>
+                        <input type="file" id="dodajsliku"  name="fileid" multiple>
                         <!--<croppa :width="400" :height="400" placeholder="Učitaj sliku" v-model="slikaReference"></croppa>-->
 						 
                     </div>
-                        
-                    
+                    <p id="poruka" v-if="store.prazno">Popunite sva polja!</p>
                     <div>
-                        <button type="submit" class="btn" @click.prevent="dodajObjavu();dohvatiObjavu();">Objavi</button>
+                        <button type="submit" class="btn" @click.prevent="dodajObjavu();dohvatiObjavu()">Objavi</button>
 						
                     </div>
 					
@@ -62,6 +61,7 @@
       <img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">
       <div class="card-body">
 	<div class="posts">
+		<h5 class="card-title">Spoil war</h5>
  <h5 class="card-title" v-for="objava in objava" :key="objava.id" :info="objava">{{objava.naslov}}</h5>
  <p class="card-text">Igra za 3 do 5 igrača koji poput vikinga trebaju podijeliti blago. Igra ze bazira na principu "Liars dice" gdje se igrači klade na broj kockica s određenim brojem u odnosu na ukupan broj kockica u igri. Svaki igrač ima svoj zaslon i plastičnu posudicu za bacanje i skrivanje kockica. Uz igru dolazi tematski dizajnirani drveni insert što ulazi u cijenu. </p>
   <a href="#" class="style-3">Read More</a>
@@ -121,6 +121,10 @@ export default{
     },
 	methods: {
 	 dodajObjavu(){
+	    if(this.noviOpisSlike=="" || this.naslov=="" /*|| this.slikaReference==null*/){
+			store.prazno=true;
+		}
+		else{
         let galerija = {
 			email: store.email,
 			naslov: this.naslov,
@@ -130,10 +134,13 @@ export default{
 		let novaObjava =  Objave.dodaj_objavu(galerija);
 		console.log(galerija);
 		console.log("evo me hehe")
+		}
 	},
 	async dohvatiObjavu() {
-			console.log("TU SAM")
+			console.log("TU SAM jos?")
+			
             this.objava = await Objave.dohvati_objavu(this.props);
+			
             console.log("Evo povratnih objava " + this.objava.naslov)
 			console.log("HEHEHEHE")
         },
@@ -383,5 +390,17 @@ export default{
   color:black;
   text-decoration: none;
 }
-
+.objavabtn {
+  margin-top: 10px;
+	text-align: center;
+  margin-bottom:20px;
+}
+.objaviGumb{
+  background-color:rgb(231, 231, 29);
+  color:white;
+  border:none;
+  margin-left:10px;
+  border-radius: 4px;
+  padding:3px;
+}
 </style>

@@ -38,11 +38,12 @@ let Objave = {
         return Service.post('/galerija', galerija);
     },
     async dohvati_objavu() {   
-        console.log("dohvacanje id-a")     
+        console.log("dohvacanje id-a")   
         let response = await Service.get(`/galerija`)
-        let doc = response.data
-        console.log("dohvacanje doc-a")  
-        console.log(doc)
+        console.log("prijeden backend?")
+        let doc = response.doc;
+        debugger;
+        console.log("dohvacanje doc-a"+doc)  
             return {
                 id: doc._id,
                 email: doc.email,
@@ -50,7 +51,12 @@ let Objave = {
                 noviOpisSlike: doc.noviOpisSlike,
                 slika: doc.slikaReference,
             };
-    }
+       
+    },
+    dodaj_dogadaj(dogadaji) {
+        return Service.post('/dogadaji', dogadaji);
+    },
+    
 }
 
 let Auth = {

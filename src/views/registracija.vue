@@ -113,11 +113,13 @@
 
 <script>
 import {Auth} from '@/services';
+import store from '@/store.js';
 
 export default{
   name: 'registracija',
   data(){
     return {
+      store,
       korisnickoIme: "",
       email: "",
       lozinka: "",
@@ -176,6 +178,8 @@ export default{
         console.log(podaci)
         await Auth.signup(podaci).then(() => {
             this.$router.push({ path: '/' });
+            store.authenticated=true;
+            store.email=this.email;
         });
         }
       }
