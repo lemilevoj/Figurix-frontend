@@ -2599,6 +2599,7 @@
 </template>
 <script>
 import canvg from "canvg";
+
 function SVG2PNG(svg, callback) {
 	var canvas = document.createElement("canvas");
 	canvas.width = 400;

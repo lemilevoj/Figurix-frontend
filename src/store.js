@@ -3,4 +3,6 @@ export default {
     email: '',
     korisnickoIme: 'Neki user',
     prazno: false,
+    nejednake: false,
+    manje: false,
 }

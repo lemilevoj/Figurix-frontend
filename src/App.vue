@@ -16,14 +16,6 @@
 						<router-link to="/galerija" class="nav-item nav-link">Galerija</router-link>
 					</div>
 					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
 					</form>
                     
 					<div class="navbar-nav ml-auto action-buttons" v-if="!store.authenticated">
@@ -108,6 +100,9 @@ export default {
       Auth.logout();
       this.$router.go(); //za osvjezavanje
     },
+  },
+  mounted(){
+	  
   }
 };
 

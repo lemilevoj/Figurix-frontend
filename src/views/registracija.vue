@@ -1,52 +1,5 @@
 <template>
-<div class="">  <!--
-  <div class="navigacija">
-			
-			<nav class="navbar navbar-expand-lg ">
-				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>
-				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon custom-toggler"></span>
-				</button>
-				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
-					</div>
-					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
-					</form>
-					<div class="navbar-nav ml-auto action-buttons">
-						<div class="nav-item dropdown">
-							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
-								<form action="/examples/actions/confirmation.php" method="post">	
-									<div class="form-group">
-										<input type="text"  class="form-control"  placeholder="email" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password"  class="form-control"  placeholder="lozinka" required="required">
-									</div>
-									<input type="submit" class="btn btn-primary btn-block" value="Prijava">
-									<div class="text-center mt-2">
-										<a style="color:black" href="#">Niste registrirani?</a>
-									</div>
-								</form>
-							</div>
-						</div>
-							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
-					</div>
-				</div>
-			</nav>
-		</div> -->
+<div class="">  
 <div class="login-box">
   <h2 class="naslov">Registracija</h2>
   <form>
@@ -95,10 +48,10 @@
             id="Lozinka2"
       />
       <label>Ponovi lozinku</label>
-      <p id="porukaPassword"></p>
-      <p id="podudaranjePassword"></p>
+      <p class="poruka2" v-if="store.prazno">Unesite sva polja!</p>
+      <p id="porukaPassword" v-if="store.manje">Lozinka mora imati 6 znakova ili više</p>
+      <p id="podudaranjePassword" v-if="store.nejednake">Nejednake lozinke</p>
     </div>
-    <p id="poruka2"></p>
     <a href="#">
       <span></span>
       <span></span>
@@ -129,43 +82,20 @@ export default{
   },
    methods: {
      
-    /*async signup(){
-        let success = await Auth.signup(this.email, this.lozinka);
-        console.log('Rezultat prijave', success);
-        if(success == true){
-          this.$router.push({path: '/'})
-         if (
-        this.lozinka !== this.lozinka2 ||
-        this.lozinka2 !== this.lozinka
-      ) {
-        alert("Lozinke se ne podudaraju!");
-        console.log(error);
-      }
-      let user = {
-          korisnickoIme: this.korisnickoIme,
-          email: this.email,
-          lozinka: this.lozinka,
-          lozinka2: this.lozinka2,
-      };
-       let newuser = await Auth.registracija(user);
-        console.log('Registriran je korisnik', newuser.data);
-        }
-    },*/
+   
 
     async registracija(korisnickoIme,email,lozinka,lozinka2) {
 
         
         if (korisnickoIme=='' || email=='' || lozinka=='' || lozinka2==''){
-          document.getElementById('poruka2').innerHTML = "Polja su prazna!";
+          store.prazno=true
         }
-        let pass = document.getElementById("Lozinka")
-        let pass2 = document.getElementById("Lozinka2")
+        
         if (lozinka !== lozinka2 || lozinka2 !== lozinka) {
-          document.getElementById('podudaranjePassword').innerHTML ="Lozinke se ne podudaraju!";
-          console.log(error);
+          store.nejednake=true;
         }
-        else if(pass.value.length <=5 || pass2.value.length <=5){
-          document.getElementById('porukaPassword').innerHTML = "Unesite 6 ili više znakova!";
+        if(this.lozinka.length <=5 || this.lozinka2.length <=5){
+          store.manje=true;
         }
       else{
         let podaci = {
@@ -277,7 +207,7 @@ export default {
 #podudaranjePassword{
   color:rgb(248, 235, 54);
 }
-#poruka2{
+.poruka2{
   color:rgb(248, 235, 54);
 }
 .animacijaGumba{

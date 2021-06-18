@@ -26,6 +26,7 @@ Service.interceptors.response.use(
         if(error.response.status == 401){
             Auth.logout();
             $router.go();
+            
         }
         //console.error('Interceptor', error.response)
     }
@@ -33,30 +34,56 @@ Service.interceptors.response.use(
 
 
 let Objave = {
-    dodaj_objavu(galerija) {
-        console.log("evo mene opet")
-        return Service.post('/galerija', galerija);
-    },
     async dohvati_objavu() {   
-        console.log("dohvacanje id-a")   
-        let response = await Service.get(`/galerija`)
-        console.log("prijeden backend?")
-        let doc = response.doc;
-        debugger;
-        console.log("dohvacanje doc-a"+doc)  
-            return {
-                id: doc._id,
+        
+        let response = await Service.get(`/galerija`);
+        console.log(response);
+        let data = response.data;
+        localStorage.setItem("galerija", JSON.stringify(data));
+        console.log(data); 
+        console.log("Current posts in services: "+data)
+        data=data.map((doc)=>{
+        return {
+            id: doc._id,
                 email: doc.email,
                 naslov: doc.naslov,
                 noviOpisSlike: doc.noviOpisSlike,
                 slika: doc.slikaReference,
-            };
-       
+        }    
+        });
+        
+        return data;
     },
-    dodaj_dogadaj(dogadaji) {
-        return Service.post('/dogadaji', dogadaji);
+    dodaj_objavu(galerija) {
+        console.log("evo mene opet")
+        return Service.post('/galerija', galerija);
     },
     
+    
+    
+};
+let Dogadaji = {
+    dodaj_dogadaj(dogadaji) {
+        return Service.post('/7wonders', dogadaji);
+    },
+    async dohvati7wonders(){
+        let response = await Service.get(`/7wonders`);
+        console.log(response);
+        let data = response.data;
+        
+        console.log("Current posts in services: "+data)
+        data=data.map((doc)=>{
+        return {
+            id: doc._id,
+            email: doc.email,
+            grad: doc.grad,
+            vrijemeDogadaja: doc.vrijeme,
+            adresa: doc.adresa,
+            ponijetiOpremu: doc.ponijetiOpremu,
+        }    
+        });
+        return data;
+    },
 }
 
 let Auth = {
@@ -70,7 +97,7 @@ let Auth = {
            email: email,
            lozinka: lozinka
         });
-        let user = response.data
+        let user = response.data;
         localStorage.setItem("user", JSON.stringify(user)); 
 
         return true;
@@ -113,4 +140,4 @@ let Auth = {
     }
 };
 
-export { Service, Auth, Objave } // exportamo Service za ručne pozive ili Posts za metode.
+export { Service, Auth, Objave, Dogadaji } // exportamo Service za ručne pozive ili Posts za metode.

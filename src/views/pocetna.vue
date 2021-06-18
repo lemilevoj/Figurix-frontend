@@ -1,54 +1,5 @@
 <template>
-	<div class="pocetna"> <!--
-		<div class="navigacija">
-			
-			<nav class="navbar navbar-expand-lg ">
-				 <a  href="/" > <img src="assets/logo2.png" class="logo">  </a>	
-				<button type="button" class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon custom-toggler"></span>
-				</button>
-				<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-					<div class="navbar-nav">
-						<a href="/" class="nav-item nav-link">Početna</a>
-						<a href="/dogadaji" class="nav-item nav-link">Događaji</a>			
-						<a href="/figurice" class="nav-item nav-link active">Figurice</a>
-						<a href="/galerija" class="nav-item nav-link">Galerija</a>
-					</div>
-					<form class="navbar-form form-inline">
-						<div class="input-group search-box">								
-							<input type="text" id="search" class="form-control" placeholder="Pretraži ...">
-							<div class="input-group-append">
-								<span class="input-group-text">
-									<i class="material-icons">&#xE8B6;</i>
-								</span>
-							</div>
-						</div>
-					</form>
-                    
-					<div class="navbar-nav ml-auto action-buttons">
-						<div class="nav-item dropdown">
-							<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Prijava</a>
-							<div class="dropdown-menu action-form"> <p class="prijava"> Prijava </p>
-								<form action="/examples/actions/confirmation.php" method="post" id="formaPrijave">	
-									<div class="form-group">
-										<input type="text" v-model="email" class="form-control" id="exampleInputEmail" placeholder="email" required="required">
-									</div>
-									<div class="form-group">
-										<input type="password" v-model="lozinka" class="form-control" id="exampleInputLozinka" placeholder="lozinka" required="required">
-									</div>
-                                    <p id="poruka"></p>
-									<input type="submit" class="btn btn-primary btn-block" value="Prijava" @click.prevent="login()">
-									<div class="text-center mt-2">
-										<a style="color:black" href="#">Niste registrirani?</a>
-									</div>
-								</form>
-							</div>
-						</div>
-							<a href="/registracija"  class="btn btn-primary ">Registracija</a>
-					</div>
-				</div>
-			</nav>
-		</div> -->
+	<div class="pocetna">
 		<ul class="cb-slideshow">
             <li><span>Image 01</span><div class="pozicija"><h4 class="font1">Za sve <h1 class="font2">kolekcionare </h1>društvenih i kartaških igara</h4></div></li>
             <li><span>Image 02</span><div class="pozicija"><h4 class="font1">Izradite svoje <h1 class="font2">figurice!</h1></h4></div></li>
@@ -70,34 +21,10 @@ import {Auth} from '@/services';
 import store from '@/store.js'
 export default {
    data() {
-    return { /*
-      email: '',
-      lozinka:'', */
+    return {
       Auth
     };
   },
- /*  methods: { 
-      async login(){
-        store.authenticated = true;
-        console.log("pokusaj prijave")
-        if(this.email=='' || this.lozinka==''){
-           document.getElementById('poruka').innerHTML = "Polja su prazna!";
-        }
-        else{
-            let success = await Auth.login(this.email, this.lozinka);
-            console.log('Rezultat prijave', success);
-            if(success == true){
-                document.getElementById("exampleInputEmail").value = '';
-                document.getElementById("exampleInputLozinka").value = '';
-                console.log(this.email,this.lozinka)
-            }
-            else{
-                console.log("Nije uspjelo")
-            }
-        }
-        console.log(store.authenticated)
-      }
-    },  */
 } 
 
 </script>

@@ -91,6 +91,7 @@
 
 import store from '@/store.js';
 import {Objave} from '@/services';
+import {Dogadaji} from '@/services';
 export default{
   
   data() {
@@ -99,6 +100,7 @@ export default{
           vrijeme: "",
           adresa: "",
           ponijetiOpremu: null,
+          objave: [],
           store
         };
     },
@@ -125,11 +127,18 @@ export default{
           adresa: this.adresa,
           ponijetiOpremu: this.ponijetiOpremu,
         }
-        let noviDogadaj =  Objave.dodaj_dogadaj(dogadaji);
+        let noviDogadaj =  Dogadaji.dodaj_dogadaj(dogadaji);
         console.log(dogadaji);
         console.log("evo me hehe")
         }
+      },
+      async dohvati7wonders(){
+            this.objave = await Dogadaji.dohvati7wonders();
+            console.log("Posts from Vue: " + this.objave.email);	
       }
+    },
+    created(){
+      this.dohvati7wonders();
     }
 }
 </script>

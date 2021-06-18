@@ -42,9 +42,10 @@
                     </div>
                     <p id="poruka" v-if="store.prazno">Popunite sva polja!</p>
                     <div>
-                        <button type="submit" class="btn" @click.prevent="dodajObjavu();dohvatiObjavu()">Objavi</button>
+                        <button type="submit" class="btn" @click.prevent="dodajObjavu();">Objavi</button>
 						
                     </div>
+					
 					
                 </form>
             </div>
@@ -55,47 +56,23 @@
 
 <section id="gallery">
   <div class="container">
-    <div class="row">
+    <div class="row" >
+		<a v-for="drugeobjave in drugeobjave" :key="drugeobjave.id"></a>
     <div class="col-lg-4 mb-4">
     <div class="card">
-      <img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">
+      <!--<img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">-->
       <div class="card-body">
 	<div class="posts">
-		<h5 class="card-title">Spoil war</h5>
- <h5 class="card-title" v-for="objava in objava" :key="objava.id" :info="objava">{{objava.naslov}}</h5>
- <p class="card-text">Igra za 3 do 5 igrača koji poput vikinga trebaju podijeliti blago. Igra ze bazira na principu "Liars dice" gdje se igrači klade na broj kockica s određenim brojem u odnosu na ukupan broj kockica u igri. Svaki igrač ima svoj zaslon i plastičnu posudicu za bacanje i skrivanje kockica. Uz igru dolazi tematski dizajnirani drveni insert što ulazi u cijenu. </p>
-  <a href="#" class="style-3">Read More</a>
-</div>
-      </div>
-     </div>
-    </div>
-  <div class="col-lg-4 mb-4">
-  <div class="card">
-      <img src="assets/test2.jpg" alt="" class="card-img-top">
-      <div class="card-body">
-		  <div class="posts">
- <h5 class="card-title">Mancrusher Gargants</h5>
- <p class="card-text">Stigao novi mancrusher gargants, uređen i obojan</p>
-  <a href="#" class="style-3">Read More</a>
-</div>
-      </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="assets/test1.jpg" alt="" class="card-img-top">
-      <div class="card-body">
-		  
-<div class="posts">
- <h5 class="card-title">Dark Overlord</h5>
- <p class="card-text">lagana party roleplaying društvena igra za 4-7 igrača. Jedan igrač, u ulozi Mračnog gospodara smrti: Rigora Mortisa, smišlja priču/zadatak koji njegove sluge goblini nisu uspješno obavili (npr. natjerali George R. R. Martina da dovrši ASOIAF franšizu) te želi saznati tko je od njih kriv za neuspjeh. </p>
-  <a href="#" class="style-3">Read More</a>
-</div>
-</div>
-     </div>
-    </div>
+			<h5 class="card-title">{{drugeobjave.email}}</h5>
+			<h5 class="card-title"></h5>
+			<p class="card-text"></p>
+	<!--<a href="#" class="style-3">Read More</a>-->
+	</div>
   </div>
 </div>
+	</div>
+	</div>
+	</div>
 </section>
         </div>
  
@@ -107,7 +84,7 @@ import {Objave} from '@/services';
 export default{
 	
 	props:['id'],
-
+	
 	data() {
         return {
             noviOpisSlike:"",
@@ -115,7 +92,9 @@ export default{
 			slikaReference: null,
 			user: {},
 			email:"",
-			objava: [],
+			objave: [],
+			drugeobjave: [{}],
+			objavgalerija: {},
 			store
         };
     },
@@ -132,18 +111,37 @@ export default{
 			slika: this.slikaReference,
         }
 		let novaObjava =  Objave.dodaj_objavu(galerija);
-		console.log(galerija);
-		console.log("evo me hehe")
+		
+		console.log("galerija?"+galerija);
+		
 		}
 	},
-	async dohvatiObjavu() {
-			console.log("TU SAM jos?")
-			
-            this.objava = await Objave.dohvati_objavu(this.props);
-			
-            console.log("Evo povratnih objava " + this.objava.naslov)
-			console.log("HEHEHEHE")
-        },
+	async dohvatiObjavu(){
+		this.objave = await Objave.dohvati_objavu();
+            
+            
+			this.drugeobjave = JSON.parse(localStorage.getItem('galerija'));
+			console.log(JSON.parse(localStorage.getItem('galerija')));	
+			console.log(this.drugeobjave && this.drugeobjave.naslov);
+			/*console.log("Email: " + this.objava.email);
+			console.log("broj objava: "+this.objava.length);
+			let lol=this.objavgalerija;
+			*/
+			/*objave.map(objave =>{
+				return{
+				email:objave.email,
+				naslov: objave.naslov,
+				noviOpisSlike: objave.naslov,
+				slika:objave.slika
+				}
+				
+			},
+			console.log("email: " + objave.naslov)
+			);
+	}*/
+	},},
+	created(){
+		this.dohvatiObjavu();
 	}
 };
 </script>
@@ -403,4 +401,5 @@ export default{
   border-radius: 4px;
   padding:3px;
 }
+
 </style>
