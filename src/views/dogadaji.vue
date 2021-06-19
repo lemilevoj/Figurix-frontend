@@ -37,7 +37,7 @@
             <a href="/risk"><div class="b-game-card__cover" style="background-image: url(/assets/risk.jpg);"><h1 class="ime_igre">Risk</h1></div></a>
         </div>
 		<div class="b-game-card">
-            <a href="/splender"><div class="b-game-card__cover" style="background-image: url(/assets/splendor.jpg);"><h1 class="ime_igre">Splendor</h1></div></a>
+            <a href="/splendor"><div class="b-game-card__cover" style="background-image: url(/assets/splendor.jpg);"><h1 class="ime_igre">Splendor</h1></div></a>
         </div>
     </div>
 

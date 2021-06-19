@@ -72,8 +72,8 @@ const routes = [
     component: () => import('../views/pokemon.vue')
   },
   {
-    path: '/lostcity',
-    name: 'lostcity',
+    path: '/lostcities',
+    name: 'lostcities',
     component: () => import('../views/lostcities.vue')
   },
   {

@@ -1,3 +1,5 @@
+
+  
 <template>
     <div>
     <section id="header" class="pozadina text-center">
@@ -36,8 +38,7 @@
                             <input v-model="noviOpisSlike" type="text" class="form-control input-lg" name="opisSlike" id="opisSlike" value="">
                     </div>
                     <div class="dodavanje-slike">
-                        <input type="file" id="dodajsliku"  name="fileid" multiple>
-                        <!--<croppa :width="400" :height="400" placeholder="Učitaj sliku" v-model="slikaReference"></croppa>-->
+                        <croppa :width="400" :height="400" placeholder="Učitaj sliku"></croppa>
 						 
                     </div>
                     <p id="poruka" v-if="store.prazno">Popunite sva polja!</p>
@@ -54,18 +55,21 @@
 </div>
   
 
-<section id="gallery">
+<section id="gallery" >
   <div class="container">
     <div class="row" >
-		<a v-for="drugeobjave in drugeobjave" :key="drugeobjave.id"></a>
+		
+			
+		
     <div class="col-lg-4 mb-4">
-    <div class="card">
+    <div class="card" v-for="drugeobjave in drugeobjave" :key="drugeobjave.id">
       <!--<img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">-->
       <div class="card-body">
 	<div class="posts">
-			<h5 class="card-title">{{drugeobjave.email}}</h5>
-			<h5 class="card-title"></h5>
-			<p class="card-text"></p>
+			<h5 class="card-title">{{drugeobjave.naslov}}</h5>
+			<p class="card-text">{{drugeobjave.noviOpisSlike}}</p>
+			<p class="card-text">{{drugeobjave.email}}</p>
+			
 	<!--<a href="#" class="style-3">Read More</a>-->
 	</div>
   </div>
@@ -95,53 +99,57 @@ export default{
 			objave: [],
 			drugeobjave: [{}],
 			objavgalerija: {},
+			url:"",
 			store
         };
     },
 	methods: {
-	 dodajObjavu(){
-	    if(this.noviOpisSlike=="" || this.naslov=="" /*|| this.slikaReference==null*/){
+		getImageBlob() {
+      return (resolve, reject) => {
+        this.slikaReference.generateBlob(blobData => {
+          if (blobData != null) {
+            resolve(blobData);
+          } else {
+            resolve(blobData);
+          }
+        });
+      };
+	 
+	},
+	 async dodajObjavu(){
+	    if(this.noviOpisSlike=="" || this.naslov==""){
 			store.prazno=true;
 		}
 		else{
+		/*let blobData = await this.getImageBlob();
+		let imageName = this.email+"/"+Date.now() + ".png";
+		debugger;
+		let result = await storage.ref(imageName).put(blobData);
+		let url = await result.ref.getDownloadURL();*/
         let galerija = {
 			email: store.email,
+			posted_at: Date.now(),
 			naslov: this.naslov,
 			noviOpisSlike: this.noviOpisSlike,
-			slika: this.slikaReference,
+			
+			
         }
 		let novaObjava =  Objave.dodaj_objavu(galerija);
-		
+		console.log(galerija)
 		console.log("galerija?"+galerija);
 		
 		}
 	},
-	async dohvatiObjavu(){
+	 
+	
+	},
+	async created(){
+
+		console.log("uso sam u dohvati objavu")
 		this.objave = await Objave.dohvati_objavu();
-            
-            
-			this.drugeobjave = JSON.parse(localStorage.getItem('galerija'));
-			console.log(JSON.parse(localStorage.getItem('galerija')));	
-			console.log(this.drugeobjave && this.drugeobjave.naslov);
-			/*console.log("Email: " + this.objava.email);
-			console.log("broj objava: "+this.objava.length);
-			let lol=this.objavgalerija;
-			*/
-			/*objave.map(objave =>{
-				return{
-				email:objave.email,
-				naslov: objave.naslov,
-				noviOpisSlike: objave.naslov,
-				slika:objave.slika
-				}
-				
-			},
-			console.log("email: " + objave.naslov)
-			);
-	}*/
-	},},
-	created(){
-		this.dohvatiObjavu();
+		this.drugeobjave = JSON.parse(localStorage.getItem('galerija'));
+		console.log(JSON.parse(localStorage.getItem('galerija')));
+
 	}
 };
 </script>
@@ -165,7 +173,6 @@ export default{
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg%27%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-
 .custom-toggler.navbar-toggler {
   border-color: white;
 }
@@ -181,7 +188,6 @@ export default{
 	width:100%;
 	top:0px;
 }
-
 .nav-link img {
 	border-radius: 50%;
 	width: 36px;
@@ -365,7 +371,6 @@ export default{
         text-indent: -9999px;
         font-size:180px;
     }
-
 	
 .style-3 {
   background:rgb(238, 235, 235);
@@ -401,5 +406,4 @@ export default{
   border-radius: 4px;
   padding:3px;
 }
-
 </style>

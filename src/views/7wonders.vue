@@ -57,28 +57,23 @@
         <span class="table-title">Turniri</span>
 
       </div>
+      
       <table id="datatable">
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Lokacija</th>
-            <th>Vrijeme</th>
-            <th>Kratki opis</th>
-          </tr>
-        </thead>
+       
+        <div v-for="objave in objave" :key="objave.id">
+          
         <tbody>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-          </tr>
-          <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-          </tr>
+          <tr><div class="marginaTablice">
+            <td>{{objave.email}}</td>
+            <td>{{objave.grad}}</td>
+            <td>{{objave.vrijeme}}</td>
+            <td>{{objave.adresa}}<p class="paragraf"></p></td>
+            <td>Oprema: {{objave.ponijetiOpremu}}</td>
+          </div></tr>
         </tbody>
+        </div>
       </table>
+      
     </div>
   </div>
 </div>
@@ -123,22 +118,22 @@ export default{
         let dogadaji = {
           email: store.email,
           grad: this.grad,
-          vrijemeDogadaja: this.vrijeme,
+          vrijeme: this.vrijeme,
           adresa: this.adresa,
           ponijetiOpremu: this.ponijetiOpremu,
         }
-        let noviDogadaj =  Dogadaji.dodaj_dogadaj(dogadaji);
+        let noviDogadaj =  Dogadaji.dodaj_dogadaj1(dogadaji);
         console.log(dogadaji);
         console.log("evo me hehe")
         }
       },
-      async dohvati7wonders(){
-            this.objave = await Dogadaji.dohvati7wonders();
-            console.log("Posts from Vue: " + this.objave.email);	
-      }
+      
     },
-    created(){
-      this.dohvati7wonders();
+    async created(){
+      console.log("uso sam u dohvati objavu")
+      this.objave = await Dogadaji.dohvati7wonders();
+      this.drugeobjave = JSON.parse(localStorage.getItem('7wonders'));
+      console.log(JSON.parse(localStorage.getItem('7wonders')));	
     }
 }
 </script>
@@ -146,6 +141,9 @@ export default{
 
 
 <style >
+.paragraf{
+  margin-left:200px;
+}
 .korisnikEmail{
     margin-top:15px;
     margin:auto;
@@ -412,4 +410,15 @@ div.material-table table td:last-child {
   border-radius: 4px;
   border:none;
 }
+.lijevo{
+  margin-left: 150px;
+}
+.card{
+  width:800px;
+  margin:auto;
+}
+.marginaTablice{
+  margin:auto;
+}
+
 </style>
