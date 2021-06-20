@@ -1,5 +1,3 @@
-
-  
 import axios from 'axios';
 import $router from '@/router';
 
@@ -50,8 +48,7 @@ let Objave = {
                 email: doc.email,
                 naslov: doc.naslov,
                 noviOpisSlike: doc.noviOpisSlike,
-                slika: doc.slikaReference,
-                url:doc.url,
+                urlSlike: doc.urlSlike,
                 posted_at:doc.posted_at,
         }      
         });

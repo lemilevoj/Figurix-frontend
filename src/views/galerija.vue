@@ -37,10 +37,10 @@
 						<span class="fw-500">Opis slike</span>
                             <input v-model="noviOpisSlike" type="text" class="form-control input-lg" name="opisSlike" id="opisSlike" value="">
                     </div>
-                    <div class="dodavanje-slike">
-                        <croppa :width="400" :height="400" placeholder="Učitaj sliku"></croppa>
-						 
-                    </div>
+					<div class="dodavanje-slike">
+						<span class="fw-500">Unesite validan URL slike: </span>
+						<input v-model="urlSlike" type="text" class="form-control input-lg" name="urlSlike" id="urlSlike" value="">
+					</div>
                     <p id="poruka" v-if="store.prazno">Popunite sva polja!</p>
                     <div>
                         <button type="submit" class="btn" @click.prevent="dodajObjavu();">Objavi</button>
@@ -59,8 +59,6 @@
   <div class="container">
     <div class="row" >
 		
-			
-		
     <div class="col-lg-4 mb-4">
     <div class="card" v-for="drugeobjave in drugeobjave" :key="drugeobjave.id">
       <!--<img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">-->
@@ -69,7 +67,7 @@
 			<h5 class="card-title">{{drugeobjave.naslov}}</h5>
 			<p class="card-text">{{drugeobjave.noviOpisSlike}}</p>
 			<p class="card-text">{{drugeobjave.email}}</p>
-			
+			<img :src="drugeobjave.urlSlike" style="max-width:200px;max-height:400px">
 	<!--<a href="#" class="style-3">Read More</a>-->
 	</div>
   </div>
@@ -99,7 +97,7 @@ export default{
 			objave: [],
 			drugeobjave: [{}],
 			objavgalerija: {},
-			url:"",
+			urlSlike:null,
 			store
         };
     },
@@ -131,11 +129,11 @@ export default{
 			posted_at: Date.now(),
 			naslov: this.naslov,
 			noviOpisSlike: this.noviOpisSlike,
-			
+			urlSlike: this.urlSlike,
 			
         }
-		let novaObjava =  Objave.dodaj_objavu(galerija);
-		console.log(galerija)
+		Objave.dodaj_objavu(galerija);
+		console.log(galerija);
 		console.log("galerija?"+galerija);
 		
 		}
