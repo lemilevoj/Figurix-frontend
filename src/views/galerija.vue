@@ -59,15 +59,16 @@
   <div class="container">
     <div class="row" >
 		
-    <div class="col-lg-4 mb-4">
-    <div class="card" v-for="drugeobjave in drugeobjave" :key="drugeobjave.id">
+    <div class="col-lg-4 mb-4" v-for="drugeobjave in drugeobjave" :key="drugeobjave.id">
+    <div class="card" >
       <!--<img src="assets/test3.jpg" alt="" class="card-img-top" width="200" height="230">-->
       <div class="card-body">
 	<div class="posts">
+			<p class="card-text email">{{drugeobjave.email}}</p>
 			<h5 class="card-title">{{drugeobjave.naslov}}</h5>
 			<p class="card-text">{{drugeobjave.noviOpisSlike}}</p>
-			<p class="card-text">{{drugeobjave.email}}</p>
-			<img :src="drugeobjave.urlSlike" style="max-width:200px;max-height:400px">
+			<img :src="drugeobjave.urlSlike" style="max-width:300px;max-height:400px">
+			<p class="card-text vrijeme">{{drugeobjave.posted_at | moment}}</p>
 	<!--<a href="#" class="style-3">Read More</a>-->
 	</div>
   </div>
@@ -83,6 +84,8 @@
 <script> 
 import store from '@/store.js';
 import {Objave} from '@/services';
+import moment from 'moment';
+
 export default{
 	
 	props:['id'],
@@ -94,12 +97,18 @@ export default{
 			slikaReference: null,
 			user: {},
 			email:"",
+			posted_at:null,
 			objave: [],
 			drugeobjave: [{}],
 			objavgalerija: {},
 			urlSlike:null,
 			store
         };
+    },
+	filters: {
+        moment: function(posted_at) {
+            return moment(posted_at).fromNow();
+        }
     },
 	methods: {
 		getImageBlob() {
@@ -403,5 +412,11 @@ export default{
   margin-left:10px;
   border-radius: 4px;
   padding:3px;
+}
+.email{
+	font-size:14px;
+}
+.vrijeme{
+	font-size: 12px;
 }
 </style>

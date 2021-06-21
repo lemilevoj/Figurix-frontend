@@ -5,4 +5,5 @@ export default {
     prazno: false,
     nejednake: false,
     manje: false,
+    authRefresh: false,
 }
