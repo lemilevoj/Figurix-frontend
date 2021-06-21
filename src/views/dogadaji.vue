@@ -4,40 +4,40 @@
 
     <div class="l-container">
         <div class="b-game-card">
-            <a href="/mtg"><div class="b-game-card__cover" style="background-image: url(/assets/mtg.jpg);"><h1 class="ime_igre">Magic: The Gathering</h1></div></a>
+            <router-link to="/mtg"><div class="b-game-card__cover" style="background-image: url(/assets/mtg.jpg);"><h1 class="ime_igre">Magic: The Gathering</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/d&d"><div class="b-game-card__cover" style="background-image: url(/assets/d&d.jpg);"><h1 class="ime_igre">Dungeons & Dragons</h1></div></a>
+            <router-link to="/d&d"><div class="b-game-card__cover" style="background-image: url(/assets/d&d.jpg);"><h1 class="ime_igre">Dungeons & Dragons</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/yugioh"><div class="b-game-card__cover" style="background-image: url(/assets/yugioh.png);"><h1 class="ime_igre">Yu-Gi-Oh!</h1></div></a>
+            <router-link to="/yugioh"><div class="b-game-card__cover" style="background-image: url(/assets/yugioh.png);"><h1 class="ime_igre">Yu-Gi-Oh!</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/pokemon"><div class="b-game-card__cover" style="background-image: url(/assets/pokemon.jpg);"><h1 class="ime_igre">Pokémon</h1></div></a>
+            <router-link to="/pokemon"><div class="b-game-card__cover" style="background-image: url(/assets/pokemon.jpg);"><h1 class="ime_igre">Pokémon</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/catan"><div class="b-game-card__cover" style="background-image: url(/assets/catan1.jpg);"><h1 class="ime_igre">Catan</h1></div></a>
+            <router-link to="/catan"><div class="b-game-card__cover" style="background-image: url(/assets/catan1.jpg);"><h1 class="ime_igre">Catan</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/arkhamhorror"><div class="b-game-card__cover" style="background-image: url(/assets/arkhamhorror.jpg);"><h1 class="ime_igre">Arkham Horror</h1></div></a>
+            <router-link to="/arkhamhorror"><div class="b-game-card__cover" style="background-image: url(/assets/arkhamhorror.jpg);"><h1 class="ime_igre">Arkham Horror</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/7wonders"><div class="b-game-card__cover" style="background-image: url(/assets/nova.jpg);"><h1 class="ime_igre">7 Wonders</h1></div></a>
+            <router-link to="/7wonders"><div class="b-game-card__cover" style="background-image: url(/assets/nova.jpg);"><h1 class="ime_igre">7 Wonders</h1></div></router-link>
         </div>
         <div class="b-game-card">
-            <a href="/uno"><div class="b-game-card__cover" style="background-image: url(/assets/uno.PNG);"><h1 class="ime_igre">Uno</h1></div></a>
+            <router-link to="/uno"><div class="b-game-card__cover" style="background-image: url(/assets/uno.PNG);"><h1 class="ime_igre">Uno</h1></div></router-link>
         </div>
 		<div class="b-game-card">
-            <a href="/lostcities"><div class="b-game-card__cover" style="background-image: url(/assets/lostcities.PNG);"><h1 class="ime_igre">Lost Cities</h1></div></a>
+            <router-link to="/lostcities"><div class="b-game-card__cover" style="background-image: url(/assets/lostcities.PNG);"><h1 class="ime_igre">Lost Cities</h1></div></router-link>
         </div>
 		<div class="b-game-card">
-            <a href="/bloodrage"><div class="b-game-card__cover" style="background-image: url(/assets/bloodrage.jpg);"><h1 class="ime_igre">Blood Rage</h1></div></a>
+            <router-link to="/bloodrage"><div class="b-game-card__cover" style="background-image: url(/assets/bloodrage.jpg);"><h1 class="ime_igre">Blood Rage</h1></div></router-link>
         </div>
 		<div class="b-game-card">
-            <a href="/risk"><div class="b-game-card__cover" style="background-image: url(/assets/risk.jpg);"><h1 class="ime_igre">Risk</h1></div></a>
+            <router-link to="/risk"><div class="b-game-card__cover" style="background-image: url(/assets/risk.jpg);"><h1 class="ime_igre">Risk</h1></div></router-link>
         </div>
 		<div class="b-game-card">
-            <a href="/splendor"><div class="b-game-card__cover" style="background-image: url(/assets/splendor.jpg);"><h1 class="ime_igre">Splendor</h1></div></a>
+            <router-link to="/splendor"><div class="b-game-card__cover" style="background-image: url(/assets/splendor.jpg);"><h1 class="ime_igre">Splendor</h1></div></router-link>
         </div>
     </div>
 
